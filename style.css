@@ -1,0 +1,184 @@
+
+body{
+    background-color: #efefef;
+}
+
+main {
+    margin: auto 10px
+}
+
+img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    border-radius: 20px 20px 0 0;
+
+}
+
+
+#barra-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f60c49;
+    padding: 0 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 98%;
+
+
+
+}
+
+#nav-logo {
+
+    margin-right: auto; /* Esto empuja todo lo demás hacia la derecha */
+    cursor: default
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Permite que el nav crezca para utilizar el espacio disponible */
+ 
+}
+
+#list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Centra la lista en el espacio disponible */
+    gap: 5.5rem; /* Espaciado entre elementos de la lista */
+}
+
+#list li a {
+  
+    text-align: center;
+    padding: 27px 40px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ddd;
+}
+
+a:hover {
+    background-color: #efefef;
+    color: #333 !important;
+    transition: all .5s ease-in-out;
+}
+
+
+
+#home {
+    background-image: url(/images/banner.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 30px;
+    height: 70vh;
+    margin-top: 12vh;
+}
+
+
+#home #img-home #text-home{
+
+    position: absolute;
+    color: #ddd;
+    align-items: flex-end;
+    font-size: 3rem;
+    margin: 0;
+    right: 40%;
+    bottom: 10%;
+
+}
+
+#aboutUs {
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 20px;
+    margin-bottom: 80px ;
+    text-align: center;
+    background-color: #101942;
+    color: #efefef;
+    cursor: default;
+ 
+}
+
+#aboutUs #titleAboutUs {
+    font-size: 3.5rem;
+    padding-top: 2rem;
+}
+
+#aboutUs #presentation {
+    position: relative;
+    font-size: 1.7rem;
+    padding: 1rem;
+    padding: 2rem
+  
+}
+
+#tours {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#card {
+    border-radius: 10px;
+    cursor: default;
+}
+
+#card-info {
+   background-color: #e4e1e1 ;
+   border-radius: 0 0 10px 10px;
+}
+#country-name {
+    text-align: center;
+}
+
+#footer-card {
+    display: flex;
+    flex-direction: row;
+}
+
+#footer-card img{
+    height: 25px;
+    width: 28px;
+    position: relative;
+    padding: 20px;
+}
+#footer-card h2 {
+    position: relative;
+    margin-right: 20px;
+}
+
+
+@media(min-width: 480px) {
+
+  
+
+    #tours {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px
+    }
+
+    #card {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #card-info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+

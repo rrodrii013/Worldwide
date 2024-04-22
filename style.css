@@ -1,10 +1,11 @@
 
 body{
     background-color: #efefef;
+    margin: 0;
 }
 
 main {
-    margin: auto 10px
+    margin: 0
 }
 
 img {
@@ -28,10 +29,7 @@ img {
     border-radius: 10px;
     top: 0;
     z-index: 1;
-    width: 98%
-
-
-
+    width: 99%
 }
 
 #nav-logo {
@@ -44,7 +42,7 @@ img {
     position: relative;
     height: 100px;
     left: 20px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 #nav {
@@ -90,9 +88,9 @@ a:hover {
     background-position: center center;
     background-size: cover;
     position: relative;
-    border-radius: 30px;
     height: 90vh;
-    margin-top: 12vh;
+    width: 100vw;
+    margin-top: 10vh;
 }
 
 
@@ -103,8 +101,6 @@ a:hover {
     font-size: 4rem;
     top: 50px;
     left: 450px
-
-
 
 }
 
@@ -200,13 +196,13 @@ a:hover {
     margin: 0 auto;
 }
 
-#card {
+.card {
     border-radius: 10px;
     cursor: default;
 
 }
 
-#card img {
+.card img {
     position: relative;
 }
 
@@ -269,7 +265,7 @@ a:hover {
 }
 
 
-#footer-card {
+.footer-card {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -277,19 +273,19 @@ a:hover {
     border-radius: 0 0 10px 10px
 }
 
-#footer-card img{
+.footer-card img{
     height: 25px;
     width: 28px;
     padding: 20px;
 }
-#footer-card h2 {
+.footer-card h2 {
 
     margin-right: 10px;
     width: 70px;
     white-space: nowrap; /*no hay saltos de línea, todo el texto queda en la misma línea*/ 
 }
 
-#footer-card #card-cost {
+.footer-card .card-cost {
 
     display: table; /*debe estar presente para utilizar table-cell*/
     position: relative;
@@ -303,7 +299,7 @@ a:hover {
 }
 
 
-#card-cost .cost {
+.card-cost .cost {
 
     display: table-cell; /*extiende el limite del texto hasta el tamaño del contenedor*/
     text-align: center;
@@ -801,7 +797,10 @@ article #btn_next {
 
 @media(min-width: 480px) {
 
-  
+ #tours .prev,
+ #tours .next {
+    display: none
+  }
 
     #tours {
         display: grid;
@@ -809,7 +808,7 @@ article #btn_next {
         gap: 50px
     }
 
-    #card {
+    .card {
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -821,5 +820,79 @@ article #btn_next {
         flex-direction: column;
     }
 }
+@media (max-width: 479px) {
 
+
+    main {
+        margin: 3px
+    }
+
+    #barra-nav {
+        width: 100%;
+    }
+
+    #nav {
+        display: none;
+    }
+
+
+    #home {
+
+        height: 80vh;
+        width: 100%;
+        margin: 130px 0 0;
+        background-attachment:scroll;
+        border-radius: 0;
+    }
+    #home #img-home #text-home{
+        font-size: 2rem;
+        left: 100px;
+        top: 100px;
+    }
+    
+    #aboutUs  {
+
+       width: 100vw;
+       height: 100vh;
+       border-radius: 0;
+       margin: auto;
+       overflow: scroll;
+       
+    }
+
+    #aboutUs #aboutUsContainer img {
+        width: 130px;
+        height: 130px;
+        left: -50px;
+        bottom: 0;
+    }
+    #aboutUs #aboutUsContainer #titleAboutUs {
+
+        display: none;
+    }  
+
+    #aboutUs #presentation {
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 18px;
+        line-height: 23px;
+        margin: 1rem;
+        padding: 5px 0 ;
+    }
+
+    #tours {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 10px;
+        transition: all 0.5s ease 
+
+    }
+
+    #card {
+        width: 150px;
+
+    }
+}
 

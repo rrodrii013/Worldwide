@@ -133,5 +133,84 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+//CARRUSEL VIAJES
+
+/*const tour = document.getElementById('tours');
+const viajes = document.querySelectorAll('.card');
+let index = 0;
+let intervalId = null;
+
+    intervalId = setInterval(function() {
+        let percentage = index * -118;
+        tour.style.transform = "translateX(" + percentage + "%)";
+        index++;
+        if (index >= viajes.length) {
+            index = 0;
+        }
+    }, 2000);*/
+
+    const tour = document.getElementById('tours');
+    const viajes = document.querySelectorAll('.card');
+    let currentWidth = window.innerWidth; //Almacena el width actual
+    let index = 0;
+    let carrusel = null;
+    
+    
+    function currentWidthFunc() {
+        currentWidth = window.innerWidth;
+        console.log(currentWidth)
+    }
+    currentWidthFunc();
+            
+
+
+    function carruselOn() {
+        carrusel = setInterval(function() {
+            let percentage = index * -118;
+            tour.style.transform = "translateX(" + percentage + "%)";
+            if (index >= viajes.length - 1) {
+                index = 0;
+            }
+            index++;
+        }, 2000)
+    };
+
+
+    function carruselOff() {
+
+        clearInterval(carruselOn)
+    }
+
+    function test() {
+
+        if(currentWidth <= 479){
+            carruselOn()
+        }
+        else {
+            carruselOff()
+        }
+    }
+
+    test();
+
+
+    window.addEventListener('resize',currentWidthFunc)
+
+
+
+
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+
+
 
 

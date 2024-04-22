@@ -160,8 +160,6 @@ let intervalId = null;
         currentWidth = window.innerWidth;
         console.log(currentWidth)
     }
-    currentWidthFunc();
-            
 
 
     function carruselOn() {
@@ -172,45 +170,42 @@ let intervalId = null;
                 index = 0;
             }
             index++;
+            console.log(index)
         }, 2000)
     };
 
+    test();
 
     function carruselOff() {
 
-        clearInterval(carruselOn)
+        clearInterval(carrusel)
     }
 
     function test() {
-
-        if(currentWidth <= 479){
-            carruselOn()
-        }
-        else {
-            carruselOff()
+      
+        carruselOff();
+        if(currentWidth > 479){
+            carruselOff();
+            index = 0
+        } else {
+            carruselOn();
         }
     }
 
-    test();
+    function resetCarrusel() {
+        if(currentWidth > 479){
+            tour.style.transform = "translateX(0)";
+            index = 0
+        }
+    }
+
+    window.addEventListener('resize',function() {
 
 
-    window.addEventListener('resize',currentWidthFunc)
+        console.log(index);
+        currentWidthFunc();
+        resetCarrusel();
+        test();
 
-
-
-
-    
-
-    
-
-    
-    
-
-    
-    
-
-    
-
-
-
+    })
 

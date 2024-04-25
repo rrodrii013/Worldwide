@@ -203,7 +203,7 @@ function handleResize() {
 }
     
     function handleResize1() {
-        responsiveWindow = window.innerWidth < 1000 ;
+        responsiveWindow = window.innerWidth < 767 ;
         if (responsiveWindow) {
             carruselMil();
         } else {
@@ -215,6 +215,8 @@ function handleResize() {
 }
 
 window.addEventListener('resize', function(){
+    stopMil();
+    stopCarrusel();
     handleResize();
     handleResize1();
 });

@@ -199,7 +199,6 @@ a:hover {
 .card {
     border-radius: 10px;
     cursor: default;
-
 }
 
 .card img {
@@ -797,21 +796,17 @@ article #btn_next {
 
 @media(min-width: 480px) {
 
- #tours .prev,
- #tours .next {
-    display: none
-  }
-
-    #tours {
+    #carrusel {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 50px
+        gap: 75px
     }
 
     .card {
         margin: 0;
         display: flex;
         flex-direction: column;
+  
     }
 
     #card-info {
@@ -880,20 +875,36 @@ article #btn_next {
         padding: 5px 0 ;
     }
 
-    #tours {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        margin-top: 2rem ;
-        width: 100%;
-        gap: 10px;
-        transition: all 0.5s ease 
 
-    }
+    
 
-    #card {
-        width: 150px;
-
-    }
+#tours {
+    width: 300px; 
+    overflow: hidden;
+    position: relative;
+    margin:auto;
 }
 
+#carrusel{
+    display: flex;
+    width: 2400px;
+    transition: transform 0.4s ease; 
+
+
+}
+
+
+.card {
+    width: 300px; 
+    flex: 0 0 auto;
+    display: inline-block;
+    margin-right: 20px;
+
+
+}
+.card.active {
+    display: block;
+}
+
+
+}

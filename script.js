@@ -133,79 +133,63 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
+
+
+
 //CARRUSEL VIAJES
 
-/*const tour = document.getElementById('tours');
-const viajes = document.querySelectorAll('.card');
 let index = 0;
-let intervalId = null;
+const viajes = document.querySelectorAll('.card');
+const totalViajes = viajes.length;
+let responsiveWindow = window.innerWidth < 479;
+let carrusel;
 
-    intervalId = setInterval(function() {
-        let percentage = index * -118;
-        tour.style.transform = "translateX(" + percentage + "%)";
-        index++;
-        if (index >= viajes.length) {
-            index = 0;
-        }
-    }, 2000);*/
-
-    const tour = document.getElementById('tours');
-    const viajes = document.querySelectorAll('.card');
-    let currentWidth = window.innerWidth; //Almacena el width actual
-    let index = 0;
-    let carrusel = null;
+function carruselTop() {
+    document.querySelector('.active').classList.remove('active');
     
-    
-    function currentWidthFunc() {
-        currentWidth = window.innerWidth;
-        console.log(currentWidth)
+    index = (index + 1) % totalViajes; // Vuelve a 0 después de la última tarjeta
+    viajes[index].classList.add('active');
+
+    const offset = -index * 320; // 300px width + 20px margin
+    document.getElementById('carrusel').style.transform = `translateX(${offset}px)`;
+}
+
+function startCarrusel() {
+    carrusel = setInterval(carruselTop, 2000);
+}
+
+function stopCarrusel() {
+    clearInterval(carrusel);
+}
+
+function resetCarruselPosition() {
+    document.getElementById('carrusel').style.transform = 'translateX(0)';
+}
+
+function handleResize() {
+    responsiveWindow = window.innerWidth < 479;
+    if (responsiveWindow) {
+        startCarrusel();
+    } else {
+        stopCarrusel();
+        resetCarruselPosition();
+
     }
+}
+
+window.addEventListener('resize', function(){
+    stopCarrusel();
+    handleResize();
+
+});
 
 
-    function carruselOn() {
-        carrusel = setInterval(function() {
-            let percentage = index * -118;
-            tour.style.transform = "translateX(" + percentage + "%)";
-            if (index >= viajes.length - 1) {
-                index = 0;
-            }
-            index++;
-            console.log(index)
-        }, 2000)
-    };
-
-    test();
-
-    function carruselOff() {
-
-        clearInterval(carrusel)
-    }
-
-    function test() {
-      
-        carruselOff();
-        if(currentWidth > 479){
-            carruselOff();
-            index = 0
-        } else {
-            carruselOn();
-        }
-    }
-
-    function resetCarrusel() {
-        if(currentWidth > 479){
-            tour.style.transform = "translateX(0)";
-            index = 0
-        }
-    }
-
-    window.addEventListener('resize',function() {
 
 
-        console.log(index);
-        currentWidthFunc();
-        resetCarrusel();
-        test();
 
-    })
+   
+   
+   
+   
 

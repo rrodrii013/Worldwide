@@ -876,35 +876,73 @@ article #btn_next {
     }
 
 
-    
-
-#tours {
-    width: 300px; 
+    #tours {
+    width: 450px; 
     overflow: hidden;
     position: relative;
-    margin:auto;
-}
+    margin:200px auto
+    }
 
-#carrusel{
+    #carrusel{
     display: flex;
-    width: 2400px;
-    transition: transform 0.4s ease; 
+    width: 3600px;
+    transition: transform 0.4s ease;
 
+    }
 
-}
-
-
-.card {
-    width: 300px; 
+    .card {
+    width: 450px; 
     flex: 0 0 auto;
     display: inline-block;
     margin-right: 20px;
+    }
 
+    .card img {
+        position: relative;
+    }
 
+    #country-name,#country-england,
+    #country-japan,#country-italy  {
+    position: absolute;
+    transform: translate(40%, 10%);
+    top: -20px;
+
+    }
+    #country-france,#country-usa {
+        position: absolute;
+        top: -20px;
+        transform: translate(25%, 10%);
+    }
+
+    #country-england{
+        position: absolute;
+        top: -20px;
+        transform: translate(2%,10%);
+        font-size: 3.2rem;
+    }
 }
-.card.active {
-    display: block;
-}
 
+
+@media ( min-width: 480px) and (max-width: 1000px) {
+
+    #tours {
+        width: 500px;
+        overflow: hidden;
+        margin:200px auto
+    }
+    #carrusel {
+        width: 4000px;
+        display: flex;
+        transition: transform 0.4s ease;
+    };
+
+    .card {
+        width: 450px; 
+        flex: 0 0 auto;
+        display: inline-block;
+        margin-right: 20px;
+        }
+
+    
 
 }

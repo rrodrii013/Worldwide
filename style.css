@@ -932,6 +932,41 @@ article #btn_next {
 
 @media (min-width: 480px) and (max-width: 767px) {
 
+    #aboutUs  {
+
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        margin: auto;
+        overflow: visible;
+        
+     }
+
+     #aboutUs #aboutUsContainer img {
+         width: 230px;
+         height: 230px;
+         left: -100px;
+         bottom: 0;
+     }
+     #aboutUs #aboutUsContainer #titleAboutUs {
+         display: none;
+     }  
+
+     #aboutUs #presentation {
+        text-align: center;
+        letter-spacing: 2px;
+        font-size: 25px;
+        line-height: 50px;
+        margin: 1rem;
+        padding: 5px 0 
+    }
+
+    #home #img-home #text-home{
+        font-size: 2em;
+        left: 100px;
+        top: 100px;
+    }
+
     #tours {
         width: 500px;
         overflow: hidden;

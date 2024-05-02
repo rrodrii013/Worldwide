@@ -98,9 +98,9 @@ a:hover {
 
     position: absolute;
     color: #ddd;
-    font-size: 4rem;
+    font-size: 3em;
     top: 50px;
-    left: 450px
+    left: 20%
 
 }
 
@@ -117,7 +117,7 @@ a:hover {
     background-color: #094b75;
     color: #efefef;
     cursor: default;
-      }
+    overflow: hidden }
  
 
 
@@ -171,10 +171,10 @@ a:hover {
 #aboutUs #aboutUsContainer img {
 
    position: absolute;
-    height: 400px;
-    width: 400px;
-    left: 700px;
-    bottom: -90px;
+    height: 30vh;
+    width: 22vw;
+    left: 80%;
+    top: 0;
     margin: 10px auto 10px auto
 
 }
@@ -1001,6 +1001,9 @@ article #btn_next {
 }
 
 @media (min-width: 767px) and (max-width: 1279px) {
+     #aboutUs #aboutUsContainer #titleAboutUs {
+         display: none;
+     }  
     .country-name,
     .country-italy,.country-japan {
        font-size: 4vw;

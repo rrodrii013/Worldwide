@@ -109,30 +109,25 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 95%;
-    height: 90vh;
-    margin: 80px auto 60px 80px;
+    margin: 80px 50px 60px auto;
+    width: 95vw;
+    height: 100vh;
+
     border-radius: 20px;
     text-align: center;
     background-color: #094b75;
     color: #efefef;
     cursor: default;
-    overflow: hidden }
+    overflow: hidden 
+}
  
 
-
-
 #aboutUs #aboutUsContainer {
-
-    
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 100px;
-
-
-    
+    margin-top: 100px 
 }
 #aboutUs #aboutUsContainer #titleAboutUs {
     font-size: 5.5rem;
@@ -155,6 +150,7 @@ a:hover {
         transition: width 0.5s ease 0s, left 0.5s ease 0s;
         width: 0;
       }
+
       #titleAboutUs:hover:after { 
         width: 100%; 
         left: 0; 
@@ -173,9 +169,9 @@ a:hover {
    position: absolute;
     height: 30vh;
     width: 22vw;
-    left: 80%;
+    left: 70%;
     top: 0;
-    margin: 10px auto 10px auto
+    margin: 10px auto 
 
 }
 
@@ -1001,10 +997,38 @@ article #btn_next {
 }
 
 @media (min-width: 767px) and (max-width: 1279px) {
+
+    #aboutUs {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        margin: auto auto 50px auto; ;
+    }
+
      #aboutUs #aboutUsContainer #titleAboutUs {
          display: none;
+         
      }  
-    .country-name,
+
+     #aboutUs #aboutUsContainer img {
+        height: 20vh;
+        width: 30vw;
+        left: 50%;
+        top: -250px;
+
+     }
+
+     
+    #aboutUs #presentation {
+        text-align: center;
+        letter-spacing: 9px;
+        font-size: 30px;
+        line-height: 50px;
+        margin: 1rem;
+        padding: 5px 0 
+    }
+    
+     .country-name,
     .country-italy,.country-japan {
        font-size: 4vw;
        transform: translateX(50%)

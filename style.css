@@ -985,14 +985,16 @@ article #btn_next {
 
         .country-name,
         .country-japan,.country-italy {
-           font-size: 6vw
+           font-size: 3.5em
         }
 
         .country-usa,.country-france {
-            font-size: 6vw;
+            font-size: 3.5em;
+            transform: translateX(20%);
         }
         .country-england{
-            font-size: 5vw
+            font-size: 3em;
+            transform: translateX(3%);
         }
     
 
@@ -1031,34 +1033,34 @@ article #btn_next {
     
      .country-name,
     .country-italy,.country-japan {
-       font-size: 4vw;
-       transform: translateX(50%)
+       font-size: 3em;
+       transform: translateX(40%)
     }
 
     .country-usa,.country-france {
-        font-size: 3.8vw;
-        transform: translateX(50%);
+        font-size: 3rem;
+        transform: translateX(35%);
     }
     .country-england{
-        font-size: 3.7vw
+        font-size: 2.8em
     }
 }
 
-/*@media screen and (min-width: 1279px) {
+@media screen and (min-width: 1279px) {
 
     .country-name,
     .country-italy,.country-japan {
-       font-size: 3vw;
+       font-size: 4em;
 
     }
 
     .country-france {
-        font-size: 3vw;
+        font-size: 4em;
     }
     .country-usa{
-        font-size: 2.5vw;       
+        font-size: 3em;       
     }
     .country-england{
-        font-size: 2.4vw
+        font-size: 3.2em
     }
-} */
+} 

@@ -49,6 +49,7 @@ img {
     display: flex;
     justify-content: center;
     flex-grow: 1; /* Permite que el nav crezca para utilizar el espacio disponible */
+    z-index: 1;
  
 }
 
@@ -135,6 +136,7 @@ a:hover {
     position: relative;
     bottom: 10px;
     right: 300px;
+    z-index: 0;
 }
 
 #titleAboutUs:after {
@@ -171,7 +173,7 @@ a:hover {
     width: 22vw;
     left: 70%;
     top: 0;
-    margin: 10px auto 
+    margin: 10px auto
 
 }
 
@@ -391,9 +393,7 @@ a:hover {
 #offers-tarjeta .tarjeta-title {
     font-weight: bold;
     white-space: nowrap;
-    font-size: 2.5rem;
-    z-index: 1;
-    
+    font-size: 2.5em
 }
 
 #tarjeta-bestprice{
@@ -791,6 +791,7 @@ article #btn_next {
     color: rgb(0, 0, 0, .4);
    }
 
+
 @media screen and (min-width: 480px) {
 
     #carrusel {
@@ -814,6 +815,7 @@ article #btn_next {
 }
 
     /*Phone*/
+
 
 @media screen and (max-width: 479px) {
 
@@ -848,10 +850,10 @@ article #btn_next {
     #aboutUs  {
 
        width: 100vw;
-       height: 100vh;
+       height: 80vh;
        border-radius: 0;
        margin: auto;
-       overflow: scroll;
+       overflow: hidden;
        
     }
 
@@ -859,7 +861,7 @@ article #btn_next {
         width: 130px;
         height: 130px;
         left: -50px;
-        bottom: 0;
+        top: -200px;
     }
     #aboutUs #aboutUsContainer #titleAboutUs {
         display: none;
@@ -929,7 +931,6 @@ article #btn_next {
 @media (min-width: 480px) and (max-width: 767px) {
 
     #aboutUs  {
-
         width: 100vw;
         height: 100vh;
         border-radius: 0;
@@ -939,10 +940,11 @@ article #btn_next {
      }
 
      #aboutUs #aboutUsContainer img {
-         width: 230px;
-         height: 230px;
+        max-width: 211px;
+         width: 210px;
+         height: 210px;
          left: -100px;
-         bottom: 0;
+         top: -230px;
      }
      #aboutUs #aboutUsContainer #titleAboutUs {
          display: none;
@@ -1012,10 +1014,9 @@ article #btn_next {
 
      #aboutUs #aboutUsContainer img {
         height: 20vh;
-        width: 30vw;
-        left: 50%;
-        top: -250px;
-
+        top: -220px;
+        left: -100px;
+        margin: 1.5em
      }
 
      
@@ -1024,7 +1025,7 @@ article #btn_next {
         letter-spacing: 9px;
         font-size: 30px;
         line-height: 50px;
-        margin: 1rem;
+        margin: 1em;
         padding: 5px 0 
     }
     

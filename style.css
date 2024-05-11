@@ -309,13 +309,11 @@ a:hover {
 
 #offers {
     width: 80vw;
-    margin: 15rem auto;
     display: flex;
     justify-content: space-between;
+    margin: 15rem auto;
     letter-spacing: .5rem;
-    overflow: hidden;
-    background-color: rebeccapurple;
-
+    overflow: hidden
 }
 
 
@@ -332,12 +330,10 @@ a:hover {
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-
 #offers-title{
     position: relative;
     font-size: 5em;
 }
-
 
 #offers-title .resaltado {
     background-color: #F60C49;
@@ -345,7 +341,6 @@ a:hover {
     left: 300px;
     font-style: italic;
 }
-
 
 #offers-tarjeta{
     position: relative;
@@ -971,11 +966,12 @@ article #btn_next {
         overflow: hidden;
         margin:200px auto
     }
+
     #carrusel {
         width: 4000px;
         display: flex;
         transition: transform 0.4s ease;
-    };
+    }
 
     .card {
         width: 450px; 
@@ -1046,6 +1042,25 @@ article #btn_next {
         font-size: 2.8em;
         transform: translateX(10%)
     }
+
+    #offers {
+        display: flex;
+        flex-direction: column
+    }
+
+    #crono{
+        margin: 2em auto;
+    }
+
+    #offers-title h2 {
+        text-align: center;
+        font-size: 1.5em
+    }
+    #offers-title h2 .resaltado{
+        position: relative;
+        top: 50px;
+        left: 20px
+    }
 }
 
 @media screen and (min-width: 1279px) {
@@ -1065,4 +1080,21 @@ article #btn_next {
     .country-england{
         font-size: 3.2em
     }
+
 } 
+
+@media screen and (max-width: 1454px) {
+    #offers-title .resaltado{
+        top: -90px
+    }
+}
+
+@media screen and (max-width: 1630px) {
+
+    #offers-title{
+        font-size: 3.5em;
+    }
+    #offers-title .resaltado{
+        left: 150px;
+    }
+}

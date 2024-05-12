@@ -727,7 +727,8 @@ article #btn_next {
     margin: 0;
    }
 
-   #footer h1 {
+   #footer h2 {
+    font-size: 2em;
     padding: 5px ;
     text-align: center;
    }
@@ -993,7 +994,26 @@ article #btn_next {
             font-size: 3em;
             transform: translateX(3%);
         }
-    
+
+        #offers {
+            display: flex;
+            flex-direction: column
+        }
+
+        #crono{
+            margin: 2em auto;
+            font-size: 5em;
+            font-style: bold;
+        }
+        #offers-title h2 {
+            text-align: center;
+            font-size: 1.5em
+        }
+        #offers-title h2 .resaltado{
+            position: relative;
+            top: 50px;
+            left: 20px
+        }
 
 }
 

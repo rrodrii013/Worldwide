@@ -379,7 +379,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out .5s
 
 }
 
@@ -393,7 +393,7 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    position: relative;
+    position: relative
 }
 
  #tarjeta-bestprice img {
@@ -402,17 +402,16 @@ a:hover {
     right: -70px;
     z-index: 0;
     width: 210px;
-    height: 210px;
+    height: 210px
 }
 
 #tarjeta-bestprice .tarjeta-title {
-
-    text-align: center;
+    text-align: center
 }
 
 
 #offers-tarjeta h3 {
-    font-size: 1.7rem;
+    font-size: 1.7rem
 }
 
 
@@ -474,14 +473,13 @@ article {
 }
 
 #opinion .resaltado1 {
-    color: #6C58FE;
+    color: #6C58FE
 }
 
 #opinion img {
     height: 800px;
     width: 1000px;
     flex-grow: 2
-
 }
 
 
@@ -668,9 +666,7 @@ article #btn_next {
     justify-content: center;
     position: relative;
     margin-bottom: 50px;
-    left: 65px;
-
-
+    left: 65px
    }
 
    .btn {
@@ -689,7 +685,7 @@ article #btn_next {
     z-index: 1;
     font-family: inherit;
     color: #d0b8b8;
-    cursor: pointer;
+    cursor: pointer
    }
    
    .btn:before {
@@ -703,16 +699,16 @@ article #btn_next {
     background: #f72c2c;
     transition: .5s ease;
     display: block;
-    z-index: -1;
+    z-index: -1
    }
    
    .btn:hover::before {
-    width: 105%;
+    width: 105%
    }
    
    .btn:hover {
     color: #111;
-    border: 2px solid #f72c2c;
+    border: 2px solid #f72c2c
    }
    
    footer {
@@ -720,24 +716,24 @@ article #btn_next {
     background-color: #094469;
     height: 30vh;
     align-content: space-between;
-    gap: 4rem;
+    gap: 4rem
    }
 
    #footer {
-    margin: 0;
+    margin: 0
    }
 
    #footer h2 {
     font-size: 2em;
     padding: 5px ;
-    text-align: center;
+    text-align: center
    }
 
    .line {
     width: 80%;
     height: 2px;
     background-color: rgb(238, 238, 238, .4);
-    margin: 0 auto 40px auto;
+    margin: 0 auto 40px auto
    }
 
    .list ul {
@@ -752,12 +748,12 @@ article #btn_next {
    }
 
    .list a {
-    color: #ddd ;
-    text-decoration: none;
+    color: #ddd;
+    text-decoration: none
    }
 
    .list a:hover {
-    background-color: transparent;
+    background-color: transparent
    }
 
    .footer-fot{
@@ -768,15 +764,14 @@ article #btn_next {
     width: 100%;
     height: 50px;
     text-align: center
-
    }
 
    .footer-fot h3 {
-    margin: 0;
+    margin: 0
    }
 
    .copyright {
-    color: rgb(0, 0, 0, .4);
+    color: rgb(0, 0, 0, .4)
    }
 
 
@@ -791,14 +786,13 @@ article #btn_next {
     .card {
         margin: 0;
         display: flex;
-        flex-direction: column;
-  
+        flex-direction: column
     }
 
     #card-info {
         flex-grow: 1;
         display: flex;
-        flex-direction: column;
+        flex-direction: column
     }
 }
 
@@ -837,7 +831,7 @@ article #btn_next {
     #home #img-home #text-home{
         font-size: 2rem;
         left: 100px;
-        top: 100px;
+        top: 100px
     }
     
     #aboutUs  {
@@ -846,7 +840,7 @@ article #btn_next {
        height: 100vh;
        border-radius: 0;
        margin: auto;
-       overflow: hidden;
+       overflow: hidden
        
     }
 
@@ -854,10 +848,10 @@ article #btn_next {
         width: 130px;
         height: 130px;
         left: -50px;
-        top: -200px;
+        top: -200px
     }
     #aboutUs #aboutUsContainer #titleAboutUs {
-        display: none;
+        display: none
     }  
 
     #aboutUs #presentation {
@@ -880,7 +874,7 @@ article #btn_next {
     #carrusel{
     display: flex;
     width: 3600px;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease
 
     }
 
@@ -888,11 +882,11 @@ article #btn_next {
     width: 450px; 
     flex: 0 0 auto;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 20px
     }
 
     .card img {
-        position: relative;
+        position: relative
     }
 
     .country-name,
@@ -900,28 +894,67 @@ article #btn_next {
     position: absolute;
     transform: translateX(25%);
     font-size: 4em;
-    top: 0;
+    top: 0
     }
     .country-france{
         position: absolute;
         transform: translateX(20%);
         font-size: 4em;
-        top: 0;
+        top: 0
     }
 
     .country-usa {
         position: absolute;
         transform: translateX(25%);
         font-size: 3.5em;
-        top: 0;
+        top: 0
     }
 
     .country-england{
         position: absolute;
         transform: translate(2%,10%);
         font-size: 3.2em;
-        top:0;
+        top:0
     }
+
+    #offers {
+        display: flex;
+        flex-direction: column
+    }
+    #crono{
+        margin: 2em auto;
+        font-size: 5em;
+        font-style: bold
+    }
+    #offers-title h2 {
+        text-align: center;
+        font-size: 1.5em
+    }
+    #offers-title h2 .resaltado{
+        position: relative;
+        top: 50px;
+        left: 20px
+    }
+
+    #offers-tarjeta{
+        display: flex;
+        flex-direction: column;
+        gap: 50px
+    }
+
+    #offers-tarjeta .tarjeta1,
+    #offers-tarjeta .tarjeta3 {
+        height: 300px;
+        width: 500px;
+
+    }
+
+    #offers-tarjeta .tarjeta2 {
+        height: 300px;
+        width: 500px;
+
+    }
+
 }
 
 
@@ -932,8 +965,7 @@ article #btn_next {
         height: 100vh;
         border-radius: 0;
         margin: auto;
-        overflow: visible;
-        
+        overflow: visible
      }
 
      #aboutUs #aboutUsContainer img {
@@ -941,10 +973,10 @@ article #btn_next {
          width: 210px;
          height: 210px;
          left: -100px;
-         top: -230px;
+         top: -230px
      }
      #aboutUs #aboutUsContainer #titleAboutUs {
-         display: none;
+         display: none
      }  
 
      #aboutUs #presentation {
@@ -959,7 +991,7 @@ article #btn_next {
     #home #img-home #text-home{
         font-size: 2em;
         left: 100px;
-        top: 100px;
+        top: 100px
     }
 
     #tours {
@@ -971,14 +1003,14 @@ article #btn_next {
     #carrusel {
         width: 4000px;
         display: flex;
-        transition: transform 0.4s ease;
+        transition: transform 0.4s ease
     }
 
     .card {
         width: 450px; 
         flex: 0 0 auto;
         display: inline-block;
-        margin-right: 20px;
+        margin-right: 20px
         }
 
         .country-name,
@@ -988,11 +1020,11 @@ article #btn_next {
 
         .country-usa,.country-france {
             font-size: 3.5em;
-            transform: translateX(20%);
+            transform: translateX(20%)
         }
         .country-england{
             font-size: 3em;
-            transform: translateX(3%);
+            transform: translateX(3%)
         }
 
         #offers {
@@ -1003,7 +1035,7 @@ article #btn_next {
         #crono{
             margin: 2em auto;
             font-size: 5em;
-            font-style: bold;
+            font-style: bold
         }
         #offers-title h2 {
             text-align: center;
@@ -1015,6 +1047,11 @@ article #btn_next {
             left: 20px
         }
 
+        #offers-tarjeta{
+            display: flex;
+            flex-direction: column
+        }
+
 }
 
 @media (min-width: 767px) and (max-width: 1279px) {
@@ -1023,12 +1060,11 @@ article #btn_next {
         width: 100vw;
         height: 100vh;
         border-radius: 0;
-        margin: auto auto 50px auto; ;
+        margin: auto auto 50px auto
     }
 
      #aboutUs #aboutUsContainer #titleAboutUs {
-         display: none;
-         
+         display: none
      }  
 
      #aboutUs #aboutUsContainer img {
@@ -1056,7 +1092,7 @@ article #btn_next {
 
     .country-usa,.country-france {
         font-size: 3rem;
-        transform: translateX(35%);
+        transform: translateX(35%)
     }
     .country-england{
         font-size: 2.8em;
@@ -1069,7 +1105,7 @@ article #btn_next {
     }
 
     #crono{
-        margin: 2em auto;
+        margin: 2em auto
     }
 
     #offers-title h2 {
@@ -1087,15 +1123,15 @@ article #btn_next {
 
     .country-name,
     .country-italy,.country-japan {
-       font-size: 4em;
+       font-size: 4em
 
     }
 
     .country-france {
-        font-size: 4em;
+        font-size: 4em
     }
     .country-usa{
-        font-size: 3em;       
+        font-size: 3em    
     }
     .country-england{
         font-size: 3.2em
@@ -1112,9 +1148,9 @@ article #btn_next {
 @media screen and (max-width: 1630px) {
 
     #offers-title{
-        font-size: 3.5em;
+        font-size: 3.5em
     }
     #offers-title .resaltado{
-        left: 150px;
+        left: 150px
     }
 }

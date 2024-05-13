@@ -360,7 +360,7 @@ a:hover {
     border: solid 1px #e4e1e1;
     border-radius: 10px;
     height: 800px;
-    width: 550px;
+    width: 500px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -374,7 +374,7 @@ a:hover {
     border: solid 1px #e4e1e1;
     border-radius: 10px;
     height: 815px;
-    width: 560px;
+    width: 530px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -391,7 +391,6 @@ a:hover {
 
 #tarjeta-bestprice{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     position: relative
 }
@@ -411,24 +410,24 @@ a:hover {
 
 
 #offers-tarjeta h3 {
-    font-size: 1.7rem
+    font-size: 1.7em
 }
 
 
 #offers-tarjeta .offers-city{
 
     position: relative;
-    padding: auto .5rem;
+    padding: auto .5em;
     color: #6C58FE;
 }
 
 #offers-tarjeta #info-tarjeta {
-
-    margin: auto;
+    margin: auto
 }
+
 #offers-tarjeta .days-starend {
-    font-size: 1.5rem;
-    color: #868686;
+    font-size: 1.5em;
+    color: #868686
 }
 
 #offers-footer {
@@ -440,14 +439,14 @@ a:hover {
 
 #offers-footer .tarjeta-cost{
     font-weight: bold;
-    font-size: 3rem
+    font-size: 3em
 }
 
 #offers-tarjeta .tarjeta1:hover,
 #offers-tarjeta .tarjeta2:hover,
 #offers-tarjeta .tarjeta3:hover {
     border: solid 2px #101942;
-    transform: scale(1.1)
+    transform: scale(1.03)
 }
 
 article {
@@ -939,21 +938,26 @@ article #btn_next {
     #offers-tarjeta{
         display: flex;
         flex-direction: column;
-        gap: 50px
+        justify-content: space-between;
     }
 
     #offers-tarjeta .tarjeta1,
     #offers-tarjeta .tarjeta3 {
-        height: 300px;
-        width: 500px;
+        height: 650px;
+        width: 90%;
+        margin-bottom: 100px;
+        overflow: hidden;
 
     }
 
     #offers-tarjeta .tarjeta2 {
-        height: 300px;
-        width: 500px;
+        height: 600px;
+        width: 90%;
+        margin-bottom: 100px;
 
     }
+
+
 
 }
 
@@ -1052,6 +1056,13 @@ article #btn_next {
             flex-direction: column
         }
 
+        #offers-tarjeta .tarjeta1,
+        #offers-tarjeta .tarjeta2,
+        #offers-tarjeta .tarjeta3{ 
+        margin-bottom: 80px;
+        width: 80%;
+        }
+
 }
 
 @media (min-width: 767px) and (max-width: 1279px) {
@@ -1116,6 +1127,19 @@ article #btn_next {
         position: relative;
         top: 50px;
         left: 20px
+    }
+
+    #offers-tarjeta {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #offers-tarjeta .tarjeta1,
+    #offers-tarjeta .tarjeta2,
+    #offers-tarjeta .tarjeta3{ 
+    width: 80%;
+    height: 700px;
+    margin-bottom: 80px;
     }
 }
 

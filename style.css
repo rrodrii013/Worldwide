@@ -432,12 +432,20 @@ a:hover {
 
 #offers-footer {
     background: #f60c49;
-    background: linear-gradient(90deg, rgb(255, 3, 70) 0%, rgb(205, 20, 20) 50%, rgb(257, 5, 75) 100%);
+    background: linear-gradient(90deg, #ff0346 0%, rgb(205, 20, 20) 50%, rgb(257, 5, 75) 100%);
     border-radius: 0 0 10px 10px;
     margin-top: auto;
 }
 
-#offers-footer .tarjeta-cost{
+#offers-footer-bst {
+    background: #BBA53D;
+    background: linear-gradient(50deg, rgb(160, 143, 32) 0%, rgb(232, 198, 30) 50%, rgb(222, 193, 47) 100%);
+    border-radius: 0 0 10px 10px;
+    margin-top: auto;
+}
+
+#offers-footer .tarjeta-cost,
+#offers-footer-bst .tarjeta-cost{
     font-weight: bold;
     font-size: 3em
 }
@@ -582,9 +590,10 @@ article #btn_next {
     background-color: rgba(0, 0, 0, 0.3);
    }
 
-   #contact h1 {
+   #contact h2 {
     text-align: center;
     color: #eee;
+    font-size: 2em;
    }
 
    #namesur {

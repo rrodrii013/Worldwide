@@ -431,15 +431,15 @@ a:hover {
 }
 
 #offers-footer {
-    background: #f60c49;
-    background: linear-gradient(90deg, #ff0346 0%, rgb(205, 20, 20) 50%, rgb(257, 5, 75) 100%);
+    background: #ec4444;
+    background: linear-gradient(90deg, #ec4444 0%, rgb(205, 20, 20) 50%, rgb(257, 5, 75) 100%);
     border-radius: 0 0 10px 10px;
     margin-top: auto;
 }
 
 #offers-footer-bst {
     background: #BBA53D;
-    background: linear-gradient(50deg, rgb(160, 143, 32) 0%, rgb(232, 198, 30) 50%, rgb(222, 193, 47) 100%);
+    background: linear-gradient(50deg, #baab71 0%, #baab71 50%, #dbc676 100%);
     border-radius: 0 0 10px 10px;
     margin-top: auto;
 }

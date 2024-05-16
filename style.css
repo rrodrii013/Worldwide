@@ -554,8 +554,6 @@ article #btn_next {
     color: gold;
     font-size: 2.5rem;
     margin: 20px auto
-
-   
    }
 
    .opinion_card p {
@@ -996,7 +994,29 @@ article #btn_next {
         right: 15px;
     }
 
-}
+    .opinion_card {
+        width: 450px !important;
+        height: 450px !important;
+        flex: 0 0 90%;
+        max-width: 90%;
+        max-height: 100%;
+        }
+
+        .opinion_card .stars {
+            font-size: 2em;
+        }
+        .input-container input[type="text"],
+        .input-container input[type="tel"],
+        .mail input[type="text"] {
+            width: 100%
+        }
+
+        .contact-btn {
+            left: 0
+        }
+    }
+
+
 
 
 @media (min-width: 480px) and (max-width: 767px) {

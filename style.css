@@ -930,8 +930,9 @@ article #btn_next {
         flex-direction: column
     }
     #crono{
+        width: 95%;
         margin: 2em auto;
-        font-size: 5em;
+        font-size: 4em;
         font-style: bold
     }
     #offers-title h2 {
@@ -941,7 +942,7 @@ article #btn_next {
     #offers-title h2 .resaltado{
         position: relative;
         top: 50px;
-        left: 20px
+        left: 10px
     }
 
     #offers-tarjeta{
@@ -956,7 +957,7 @@ article #btn_next {
 
     #offers-tarjeta .tarjeta1,
     #offers-tarjeta .tarjeta3 {
-        height: 650px;
+        height: 650px !important;
         width: 90% !important;
         margin-bottom: 100px;
         overflow: hidden;
@@ -964,7 +965,7 @@ article #btn_next {
     }
 
     #offers-tarjeta .tarjeta2 {
-        height: 1500px;
+        height: 650px !important;
         width: 90% !important;
         margin-bottom: 100px;
 
@@ -975,6 +976,24 @@ article #btn_next {
         height: 150px;
         right: -30px;
         top: -65px;
+    }
+
+
+    #opinion{
+        position: relative;
+    }
+    #opinion h2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 3em !important;
+    }
+
+    #opinion img {
+        height: 300px;
+        width: 300px;
+        position: absolute;
+        bottom: 50px;
+        right: 15px;
     }
 
 }

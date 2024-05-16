@@ -400,8 +400,8 @@ a:hover {
     bottom: -5px;
     right: -70px;
     z-index: 0;
-    width: 210px;
-    height: 210px
+    width: 170px;
+    height: 170px
 }
 
 #tarjeta-bestprice .tarjeta-title {
@@ -950,6 +950,11 @@ article #btn_next {
         justify-content: space-between;
     }
 
+    .tarjeta-title {
+        font-size: 2em !important;
+        }
+    
+
     #offers-tarjeta .tarjeta1,
     #offers-tarjeta .tarjeta3 {
         height: 650px;
@@ -966,7 +971,12 @@ article #btn_next {
 
     }
 
-
+    #tarjeta-bestprice img {
+        width: 30%;
+        height: 150px;
+        right: -55px;
+        top: -55px;
+    }
 
 }
 
@@ -1072,6 +1082,14 @@ article #btn_next {
         width: 80%;
         }
 
+        
+    #tarjeta-bestprice img {
+        width: 30%;
+        height: 150px;
+        right: -60px;
+        top: -50px;
+    }
+
 }
 
 @media (min-width: 767px) and (max-width: 1279px) {
@@ -1138,18 +1156,6 @@ article #btn_next {
         left: 20px
     }
 
-    #offers-tarjeta {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #offers-tarjeta .tarjeta1,
-    #offers-tarjeta .tarjeta2,
-    #offers-tarjeta .tarjeta3{ 
-    width: 80%;
-    height: 700px;
-    margin-bottom: 80px;
-    }
 }
 
 @media screen and (min-width: 1279px) {
@@ -1186,4 +1192,18 @@ article #btn_next {
     #offers-title .resaltado{
         left: 150px
     }
+
+    #offers-tarjeta {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #offers-tarjeta .tarjeta1,
+    #offers-tarjeta .tarjeta2,
+    #offers-tarjeta .tarjeta3{ 
+    width: 60%;
+    height: 700px;
+    margin-bottom: 80px;
+    }
+
 }

@@ -25,7 +25,7 @@ img {
     overflow: hidden;
     position: fixed;
     padding: 0 1rem;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     top: 0;
     z-index: 1;
     width: 99%
@@ -947,7 +947,6 @@ article #btn_next {
     #offers-tarjeta{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     .tarjeta-title {
@@ -958,15 +957,15 @@ article #btn_next {
     #offers-tarjeta .tarjeta1,
     #offers-tarjeta .tarjeta3 {
         height: 650px;
-        width: 90%;
+        width: 90% !important;
         margin-bottom: 100px;
         overflow: hidden;
 
     }
 
     #offers-tarjeta .tarjeta2 {
-        height: 600px;
-        width: 90%;
+        height: 1500px;
+        width: 90% !important;
         margin-bottom: 100px;
 
     }
@@ -974,8 +973,8 @@ article #btn_next {
     #tarjeta-bestprice img {
         width: 30%;
         height: 150px;
-        right: -55px;
-        top: -55px;
+        right: -30px;
+        top: -65px;
     }
 
 }

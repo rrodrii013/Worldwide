@@ -645,7 +645,7 @@ article #btn_next {
   }
   
   .input-container .underline,
-  .mail .underline  {
+  .mail .underline{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1013,6 +1013,11 @@ article #btn_next {
 
         .contact-btn {
             left: 0
+        }
+
+        .input-container .underline,
+        .mail .underline {
+            width: 100%;
         }
     }
 

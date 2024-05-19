@@ -861,7 +861,6 @@ article #btn_next {
         padding: 5px 0 
     }
 
-
     #tours {
     width: 450px; 
     overflow: hidden;
@@ -871,9 +870,8 @@ article #btn_next {
 
     #carrusel{
     display: flex;
-    width: 3600px;
+    width: 3620px;
     transition: transform 0.4s ease
-
     }
 
     .card {
@@ -1074,17 +1072,19 @@ article #btn_next {
 
     #tours {
         width: 500px;
-        overflow: hidden;
-        margin:200px auto
+        margin: 200px auto
     }
 
     #carrusel {
-        width: 4000px;
+
+        width: 3600px;
         display: flex;
+        overflow: hidden;
         transition: transform 0.4s ease
     }
 
     .card {
+        position: relative;
         width: 450px; 
         flex: 0 0 auto;
         display: inline-block;
@@ -1093,16 +1093,43 @@ article #btn_next {
 
         .country-name,
         .country-japan,.country-italy {
-           font-size: 3.5em
+            position: absolute;
+           font-size: 3.5em;
+           right: 50px;
+           transform: translateY(-580%);
+           z-index: 1;
         }
 
-        .country-usa,.country-france {
+        .country-japan{
+            position: absolute;
+           font-size: 3.5em;
+           right: 85px;
+           transform: translateY(-570%);
+           z-index: 1;
+        }
+
+        .country-france {
+            position: absolute;
             font-size: 3.5em;
-            transform: translateX(20%)
+            right: 50px;
+            transform: translateY(-580%);
+            z-index: 1;
         }
         .country-england{
+            position: absolute;
             font-size: 3em;
-            transform: translateX(3%)
+            right: 10px;
+            transform: translateY(-650%);
+            z-index: 1;
+        }
+
+        .country-usa {
+            position: absolute;
+            font-size: 3em;
+            right: 60px;
+            transform: translateY(-350%);
+            z-index: 1;
+
         }
 
         #offers {

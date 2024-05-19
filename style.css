@@ -513,7 +513,7 @@ article #btn_next {
     box-sizing: border-box;
     background-color: #e4e1e1;
     width: 300px;
-    height: 300px;
+    height: 400px;
     flex: 0 0 25%; /* Asegura que cada opinión ocupe el 25% del contenedor */
     max-width: 25%;
     max-height: 25%;
@@ -545,7 +545,7 @@ article #btn_next {
 .opinion_card .stars {
     color: gold;
     font-size: 2.5rem;
-    margin: 20px auto
+    margin-top: auto
    }
 
    .opinion_card p {
@@ -1186,7 +1186,6 @@ article #btn_next {
      }
 
      #btn_next {
-
         bottom: 50px
      }
 
@@ -1329,17 +1328,39 @@ article #btn_next {
         flex-direction: column;
      }
 
-         #opinion h2 {
-            padding: 2em;
-        font-size: 3em !important
+     #opinion h2 {
+        padding: 2em;
+        font-size: 4em !important
     }
 
     #opinion img {
         height: 600px;
         width: 650px;
         position: absolute;
-        bottom: 50px
+        bottom: -210px
     }
+
+    .opinion_card {
+        height: 450px !important;
+        flex: 0 0 90%;
+        max-width: 40%;
+        }
+
+    .user_opinion{
+     max-width: 100%;
+
+    }
+
+    .user_opinion p {
+        font-size: 1.1em;
+    }
+
+    .user_opinion .stars{
+        font-size: 1.5em;
+        margin-top: auto; 
+
+    }
+
 
     .list ul {
         flex-wrap: wrap;

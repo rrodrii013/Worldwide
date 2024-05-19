@@ -4,6 +4,7 @@ body{
     margin: 0;
 }
 
+
 main {
     margin: 0
 }
@@ -503,8 +504,6 @@ article #btn_next {
     border-radius: 15px 0 0 15px;
     bottom: -100px;
     margin: auto auto auto 1rem
-
-
 }
 
 .opinion_card {

@@ -1201,6 +1201,7 @@ article #btn_next {
 
 @media (min-width:768px ) and (max-width: 996px) {
     .card { 
+        position: relative;
        width: 320px;
     }
     .footer-card {
@@ -1216,6 +1217,25 @@ article #btn_next {
     .footer-card .card-cost {
         position: relative;
         right: 100px;
+    }
+
+    .country-name,
+    .country-italy,.country-japan {
+       font-size: 2.8em !important;
+       left: -50px;
+       letter-spacing: .3em
+    }
+
+    .country-usa,.country-france {
+        font-size: 2.8em !important;
+        left: -80px;
+        letter-spacing: .3em
+    }
+    .country-england{
+        font-size: 2.3em !important;
+        left: -25px;
+        top: 10px;
+        letter-spacing: .2em
     }
   
 }

@@ -185,7 +185,7 @@ a:hover {
 .card {
     border-radius: 10px;
     cursor: default;
-    text-align: center;
+    text-align: center
 }
 
 .card img {
@@ -775,23 +775,7 @@ article #btn_next {
 
 @media screen and (min-width: 480px) {
 
-    #carrusel {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 75px
-    }
 
-    .card {
-        margin: 0;
-        display: flex;
-        flex-direction: column
-    }
-
-    #card-info {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column
-    }
 }
 
     /*Phone*/
@@ -862,15 +846,14 @@ article #btn_next {
     }
 
     #tours {
-    width: 450px; 
+    width: 470px; 
     overflow: hidden;
     position: relative;
-    margin:200px auto
+    margin: 200px 0
     }
 
     #carrusel{
     display: flex;
-    width: 3620px;
     transition: transform 0.4s ease
     }
 
@@ -1072,14 +1055,13 @@ article #btn_next {
 
     #tours {
         width: 500px;
-        margin: 200px auto
+        margin: 200px auto;
+        overflow: hidden;
     }
 
     #carrusel {
-
         width: 4400px;
         display: flex;
-        overflow: hidden;
         transition: transform 0.4s ease
     }
 
@@ -1217,6 +1199,27 @@ article #btn_next {
 
 }
 
+@media (min-width:768px ) and (max-width: 996px) {
+    .card { 
+       width: 320px;
+    }
+    .footer-card {
+        width: 320px;
+        height: 150px;
+        flex-wrap: wrap;
+    }
+
+    .footer-card h2 {
+        font-size: 1.3em;
+    }
+
+    .footer-card .card-cost {
+        position: relative;
+        right: 100px;
+    }
+  
+}
+
 @media (min-width: 767px) and (max-width: 1279px) {
 
     #aboutUs {
@@ -1248,7 +1251,24 @@ article #btn_next {
         margin: 10em 3em;
         padding: 5px 0 
     }
-    
+
+    #carrusel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 75px
+    }
+
+    .card {
+        margin: 0;
+        display: flex;
+        flex-direction: column
+    }
+
+    #card-info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column
+    }
      .country-name,
     .country-italy,.country-japan {
        font-size: 3em;
@@ -1311,6 +1331,18 @@ article #btn_next {
 
 
 @media screen and (min-width: 1279px) {
+
+    #carrusel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 75px
+    }
+
+    .card {
+        margin: 0;
+        display: flex;
+        flex-direction: column
+    }
 
     .country-name,
     .country-italy,.country-japan {

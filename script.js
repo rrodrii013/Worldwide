@@ -152,7 +152,7 @@ function carruselTop() {
     index = (index + 1) % totalViajes; // Vuelve a 0 después de la última tarjeta
     viajes[index].classList.add('active');
 
-    const offset = -index * 50; // 450px width + 20px margin
+    const offset = -index * 470; // 450px width + 20px margin
     document.getElementById('carrusel').style.transform = `translateX(${offset}px)`;
 }
 
@@ -176,7 +176,7 @@ function maxMil() {
         index = (index + 1) % totalViajes; // Vuelve a 0 después de la última tarjeta
         viajes[index].classList.add('active');
 
-         offset = -index * 550; // 500px width + 20px margin
+         offset = -index * 470; // 500px width + 20px margin
         document.getElementById('carrusel').style.transform = `translateX(${offset}px)`
        
     }
@@ -211,8 +211,8 @@ function handleResize() {
             stopCarrusel();
             resetCarruselPosition();
         }
- 
-}
+        
+    }
 
 window.addEventListener('resize', function(){
     stopMil();

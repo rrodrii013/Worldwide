@@ -93,7 +93,6 @@ a:hover {
     font-size: 3em;
     top: 50px;
     left: 20%
-
 }
 
 #aboutUs {
@@ -969,7 +968,6 @@ article #btn_next {
         top: -65px
     }
 
-
     #opinion{
         position: relative
     }
@@ -1002,7 +1000,7 @@ article #btn_next {
         flex: 0 0 90%;
         max-width: 90%;
         max-height: 100%
-        }
+    }
 
         .opinion_card .stars {
             font-size: 1.5em
@@ -1037,22 +1035,24 @@ article #btn_next {
 
 
 @media (min-width: 480px) and (max-width: 767px) {
+    #home #img-home #text-home{
+        left: 0
+    }
 
     #aboutUs  {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         border-radius: 0;
         margin: auto;
-        overflow: visible
      }
 
      #aboutUs #aboutUsContainer img {
-        max-width: 211px;
          width: 210px;
-         height: 210px;
+         height: 150px;
          left: -100px;
-         top: -230px
+         top: 0
      }
+
      #aboutUs #aboutUsContainer #titleAboutUs {
          display: none
      }  
@@ -1060,10 +1060,10 @@ article #btn_next {
      #aboutUs #presentation {
         text-align: center;
         letter-spacing: 2px;
-        font-size: 25px;
+        font-size: 1.4em;
         line-height: 50px;
-        margin: 1rem;
-        padding: 5px 0 
+        margin: 7em 2em;
+        padding: 20px 0 
     }
 
     #home #img-home #text-home{
@@ -1137,6 +1137,9 @@ article #btn_next {
         width: 80%;
         }
 
+        .tarjeta-title {
+            font-size: 2em !important;
+            }
         
     #tarjeta-bestprice img {
         width: 30%;
@@ -1145,9 +1148,44 @@ article #btn_next {
         top: -50px;
     }
 
+     #opinion {
+        position: relative;
+     }
+
+     #opinion h2 {
+        font-size: 3.5em;
+     }
+
+    #opinion img {
+        position: absolute;
+        height: 450px;
+        width: 400px;
+        bottom: -150px;
+        right: 80px
+        }
+
+    .opinion_card {
+            width: 767px !important;
+            height: 450px !important;
+            flex: 0 0 90%;
+            max-width: 90%;
+            max-height: 100%
+            }
+
+     .user_opinion{
+         max-width: 100%;
+     }
+
+     #btn_next {
+
+        bottom: 50px
+     }
+
+
+
     .list ul {
         flex-wrap: wrap;
-        gap: 1em;
+        gap: 1em
     }
 
 }
@@ -1156,8 +1194,9 @@ article #btn_next {
 
     #aboutUs {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         border-radius: 0;
+        position: relative;
         margin: auto auto 50px auto
     }
 
@@ -1166,8 +1205,9 @@ article #btn_next {
      }  
 
      #aboutUs #aboutUsContainer img {
-        height: 20vh;
-        top: -220px;
+        position: absolute;
+        height: 200px;
+        top: -20px;
         left: -100px;
         margin: 1.5em
      }
@@ -1175,10 +1215,10 @@ article #btn_next {
      
     #aboutUs #presentation {
         text-align: center;
-        letter-spacing: 9px;
-        font-size: 30px;
+        letter-spacing: 4px;
+        font-size: 1.5em;
         line-height: 50px;
-        margin: 1em;
+        margin: 10em 3em;
         padding: 5px 0 
     }
     
@@ -1222,6 +1262,8 @@ article #btn_next {
     }
 
 }
+
+
 
 @media screen and (min-width: 1279px) {
 

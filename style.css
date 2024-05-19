@@ -1077,7 +1077,7 @@ article #btn_next {
 
     #carrusel {
 
-        width: 3600px;
+        width: 4400px;
         display: flex;
         overflow: hidden;
         transition: transform 0.4s ease

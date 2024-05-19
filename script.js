@@ -144,7 +144,7 @@ const viajes = document.querySelectorAll('.card');
 const totalViajes = viajes.length;
 let responsiveWindow = window.innerWidth;
 let carrusel;
-let carrusel1000;
+let carrusel767;
 
 function carruselTop() {
     document.querySelector('.active').classList.remove('active');
@@ -152,7 +152,7 @@ function carruselTop() {
     index = (index + 1) % totalViajes; // Vuelve a 0 después de la última tarjeta
     viajes[index].classList.add('active');
 
-    const offset = -index * 470; // 450px width + 20px margin
+    const offset = -index * 50; // 450px width + 20px margin
     document.getElementById('carrusel').style.transform = `translateX(${offset}px)`;
 }
 
@@ -176,7 +176,7 @@ function maxMil() {
         index = (index + 1) % totalViajes; // Vuelve a 0 después de la última tarjeta
         viajes[index].classList.add('active');
 
-         offset = -index * 500; // 500px width + 20px margin
+         offset = -index * 550; // 500px width + 20px margin
         document.getElementById('carrusel').style.transform = `translateX(${offset}px)`
        
     }
@@ -184,11 +184,11 @@ function maxMil() {
 }
 
 function carruselMil() {
-    carrusel1000 = setInterval(maxMil, 2000)
+    carrusel767 = setInterval(maxMil, 2000)
 }
 
 function stopMil(){
-    clearInterval(carrusel1000)
+    clearInterval(carrusel767)
 }
 
 function handleResize() {

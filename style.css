@@ -1,7 +1,9 @@
 
 body{
     background-color: #efefef;
-    margin: 0;
+    margin: 0 !important;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 main {
@@ -20,7 +22,7 @@ main {
     border-radius: 0 0 10px 10px;
     top: 0;
     z-index: 1;
-    width: 99%
+    width: 100%
 }
 
 #nav-logo {
@@ -44,8 +46,6 @@ main {
  
 }
 
-
-
 #list {
     display: flex;
     justify-content: center;
@@ -57,7 +57,6 @@ main {
 }
 
 #list li a {
-  
     padding: 100px 40px;
     font-size: 1.5rem;
     text-align: center;
@@ -72,8 +71,6 @@ a:hover {
     transition: all .5s ease-in-out;
 }
 
-
-
 #home {
     background-image:linear-gradient(to right, rgba(0 0 0 / 0.2), rgba(0 0 0 / 0.5)), url(/images/banner.jpg);
     background-attachment: fixed;
@@ -81,7 +78,7 @@ a:hover {
     background-size: cover;
     position: relative;
     height: 90vh;
-    width: 100vw;
+    width: 100%;
     margin-top: 10vh;
 }
 
@@ -551,7 +548,7 @@ article #btn_next {
    }
 
    .contactt {
-    background-image: url(/images/contacttt.jpg);
+    background-image: url(/images/contact.jpg);
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -572,7 +569,7 @@ article #btn_next {
     height: 800px;
     width: 1100px;
     border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
    }
 
    #contact h2 {
@@ -778,9 +775,8 @@ article #btn_next {
 
 @media screen and (max-width: 479px) {
 
-
     main {
-        margin: 3px
+        margin:0
     }
 
     #barra-nav {
@@ -797,7 +793,6 @@ article #btn_next {
         margin: 10px 0;
     }
 
-
     #home {
         height: 80vh;
         width: 100vw;
@@ -805,6 +800,7 @@ article #btn_next {
         background-attachment:scroll;
         border-radius: 0;
     }
+
     #home #img-home #text-home{
         font-size: 2rem;
         left: 100px;
@@ -812,7 +808,6 @@ article #btn_next {
     }
     
     #aboutUs {
-
        width: 100vw;
        height: 100vh;
        border-radius: 0;
@@ -827,17 +822,18 @@ article #btn_next {
         left: -50px;
         top: -200px
     }
+
     #aboutUs #aboutUsContainer #titleAboutUs {
         display: none
     }  
 
     #aboutUs #presentation {
         text-align: center;
-        letter-spacing: 2px;
-        font-size: 18px;
-        line-height: 23px;
-        margin: .5rem ;
-        padding: 5px 0 
+        letter-spacing: 3px;
+        font-size: 1.5em;
+        line-height: 30px;
+        margin: 0 2em ;
+        padding: 0 10px
     }
 
     #tours {
@@ -849,7 +845,7 @@ article #btn_next {
 
     #carrusel{
     display: flex;
-    transition: transform 0.4s ease
+    transition: transform 0.7s ease-out
     }
 
     .card {
@@ -1057,7 +1053,7 @@ article #btn_next {
     #carrusel {
         width: 4400px;
         display: flex;
-        transition: transform 0.4s ease
+        transition: transform 0.7s ease-out
     }
 
     .card {
@@ -1145,35 +1141,37 @@ article #btn_next {
             font-size: 2em !important;
             }
         
-    #tarjeta-bestprice img {
+     #tarjeta-bestprice img {
         width: 30%;
         height: 150px;
         right: -60px;
         top: -50px;
-    }
+     }
 
      #opinion {
         position: relative;
      }
 
-     #opinion h2 {
-        font-size: 3.5em;
-     }
-
-    #opinion img {
+     #opinion img {
         position: absolute;
         height: 450px;
         width: 400px;
         bottom: -150px;
         right: 80px
         }
-
+    
     .opinion_card {
             width: 767px !important;
             height: 450px !important;
             flex: 0 0 90%;
             max-width: 90%;
-            max-height: 100%
+            max-height: 100%;
+            transition: opacity 0.7s ease-out;
+            }
+
+            .opinion_card .hidden {
+                opacity: 0;
+                display: none;
             }
 
      .user_opinion{
@@ -1231,6 +1229,7 @@ article #btn_next {
         top: 10px;
         letter-spacing: .2em
     }
+
   
 }
 
@@ -1394,6 +1393,14 @@ article #btn_next {
     }
     .country-england{
         font-size: 3.2em
+    }
+
+    .user_opinion p{
+        font-size: 1.1em;
+    }
+
+    .opinion_card .stars {
+        font-size: 1.6em;
     }
 
 } 

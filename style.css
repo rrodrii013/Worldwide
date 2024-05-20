@@ -4,7 +4,6 @@ body{
     margin: 0;
 }
 
-
 main {
     margin: 0
 }
@@ -103,8 +102,7 @@ a:hover {
     flex-direction: column;
     margin: 80px 50px 60px auto;
     width: 95vw;
-    height: 100vh;
-
+    height: 100%;
     border-radius: 20px;
     text-align: center;
     background-color: #094b75;
@@ -158,14 +156,12 @@ a:hover {
 
 
 #aboutUs #aboutUsContainer img {
-
    position: absolute;
-    height: 30vh;
-    width: 22vw;
+    height: 100%;
+    width: 50%;
     left: 70%;
     top: 0;
     margin: 10px auto
-
 }
 
 #aboutUs #presentation {
@@ -1241,7 +1237,7 @@ article #btn_next {
 @media (min-width: 767px) and (max-width: 1279px) {
 
     #aboutUs {
-        width: 100vw;
+        width: 100%;
         height: 100%;
         border-radius: 0;
         position: relative;
@@ -1254,19 +1250,19 @@ article #btn_next {
 
      #aboutUs #aboutUsContainer img {
         position: absolute;
-        height: 200px;
+        height: 250px;
+        width: 300px;
         top: -20px;
-        left: -100px;
+        left: -170px;
         margin: 1.5em
      }
 
-     
     #aboutUs #presentation {
         text-align: center;
         letter-spacing: 4px;
         font-size: 1.5em;
         line-height: 50px;
-        margin: 10em 3em;
+        margin: 12em 3em;
         padding: 5px 0 
     }
 

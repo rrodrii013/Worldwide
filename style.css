@@ -15,7 +15,7 @@ main {
     align-items: center;
     justify-content: space-between;
     background-color: #f60c49;
-    background: linear-gradient(90deg, rgb(255, 3, 70) 0%, #f72c2c 50%, rgb(257, 5, 75) 100%);
+    background: linear-gradient(90deg, #ff0346 0%, #f72c2c 50%, rgb(257, 5, 75) 100%);
     overflow: hidden;
     position: fixed;
     padding: 0 1rem;
@@ -84,12 +84,119 @@ a:hover {
 
 
 #home #img-home #text-home{
-
     position: absolute;
     color: #ddd;
     font-size: 3em;
     top: 50px;
-    left: 20%
+    left: 20%;
+}
+
+#home #img-home #text-homea {
+    position: absolute;
+    color: #ddd;
+    font-size: 2.2em;
+    top: 145px;
+    left: 20%;
+}
+
+.btn-home,
+.btn-home *,
+.btn-home :after,
+.btn-home :before,
+.btn-home:after,
+.btn-home:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-home {
+    left: 73%;
+    top: 100px;
+    width: 280px;
+    height: 95px;
+  -webkit-tap-highlight-color: transparent;
+  background-image: none;
+    background: #ff0000;
+  color: #ff0000;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-home:disabled {
+  cursor: default;
+}
+.btn-home:-moz-focusring {
+  outline: auto;
+}
+.btn-home svg {
+  display: block
+}
+.btn-home [hidden] {
+  display: none;
+}
+.btn-home {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-home span {
+  mix-blend-mode: difference;
+}
+.btn-home:before {
+  -webkit-animation: move-out 0.3s;
+  animation: move-out 0.3s;
+  background: linear-gradient(90deg, #ff0346 0%, #f72c2c 50%, rgb(257, 5, 75) 100%);
+  content: "";
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  will-change: transform;
+}
+.btn-home:hover:before {
+  -webkit-animation: move-in 0.3s forwards;
+  animation: move-in 0.3s forwards;
+}
+@-webkit-keyframes move-in {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes move-in {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+@keyframes move-out {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
 }
 
 #aboutUs {
@@ -765,9 +872,18 @@ article #btn_next {
    }
 
 
-@media screen and (min-width: 480px) {
+@media (min-width:350px) and (max-width:2000px) {
+    #home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-
+    .btn-home{
+        position: relative;
+        left: 0;
+        top: -130px;
+    }
 }
 
     /*Phone*/
@@ -805,6 +921,12 @@ article #btn_next {
         font-size: 2rem;
         left: 100px;
         top: 100px
+    }
+
+    .btn-home {
+        top: -100px;
+        width: 250px;
+        height: 70px;
     }
     
     #aboutUs {
@@ -1000,15 +1122,17 @@ article #btn_next {
             flex-wrap: wrap;
             gap: .5em;
         }
-
+        
     }
 
 
 
 
 @media (min-width: 480px) and (max-width: 767px) {
-    #home #img-home #text-home{
-        left: 0
+       #text-home h1{
+        font-size: 10px;
+        left: 100px;
+        top: 100px
     }
 
     #aboutUs  {
@@ -1036,12 +1160,6 @@ article #btn_next {
         line-height: 50px;
         margin: 7em 2em;
         padding: 20px 0 
-    }
-
-    #home #img-home #text-home{
-        font-size: 2em;
-        left: 100px;
-        top: 100px
     }
 
     #tours {
@@ -1409,6 +1527,9 @@ article #btn_next {
     #offers-title .resaltado{
         top: -90px
     }
+    #text-homea {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1630px) {
@@ -1434,3 +1555,5 @@ article #btn_next {
     }
 
 }
+
+

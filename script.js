@@ -39,7 +39,18 @@ const OpinionUsers = async () => {
 document.addEventListener('DOMContentLoaded', OpinionUsers);
 
 
+//SCROLL
 
+let btnHome = document.querySelector('.btn-home');
+
+function scrollWindow() {
+    let contact = document.querySelector('.contactt');
+    contact.scrollIntoView({behavior: 'smooth'});
+}
+
+btnHome.addEventListener('click', () => {
+    scrollWindow();
+})
 
 
 //CRONOMETRO 

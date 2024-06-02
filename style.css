@@ -24,6 +24,11 @@ main {
     width: 100%
 }
 
+#barra-nav .icon-menu {
+    width: 100px;
+    height: 100px;
+}
+
 #barra-nav .responsive-nav {
     display: flex;
     position: absolute;
@@ -35,20 +40,20 @@ main {
     height: 300px;
     width: 200px;
     background-color: rgba(0 0 0 / 0.2);
+    backdrop-filter: blur(15px);
     border-radius: 10px;
 }
 
 #barra-nav .responsive-nav li a {
     font-size: 1.5rem;
     text-decoration: none;
-    color: #efefef;;
+    color: #ddd;
+    padding: 15px 55px;
+    border-radius: 8px ;
+
 }
 
-
-
-
 #nav-logo {
-
     margin-right: auto; /* Esto empuja todo lo demás hacia la derecha */
     cursor: default
 }
@@ -1546,6 +1551,10 @@ article #btn_next {
 
 
 @media screen and (min-width: 1279px) {
+
+    #barra-nav .icon-menu {
+    display: none;
+    }
 
 
     #barra-nav .responsive-nav{

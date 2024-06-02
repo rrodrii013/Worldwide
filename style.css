@@ -16,7 +16,6 @@ main {
     justify-content: space-between;
     background-color: #f60c49;
     background: linear-gradient(90deg, #ff0346 0%, #f72c2c 50%, rgb(257, 5, 75) 100%);
-    overflow: hidden;
     position: fixed;
     padding: 0 1rem;
     border-radius: 0 0 10px 10px;
@@ -24,6 +23,29 @@ main {
     z-index: 1;
     width: 100%
 }
+
+#barra-nav .responsive-nav {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    top: 110px;
+    height: 300px;
+    width: 200px;
+    background-color: rgba(0 0 0 / 0.2);
+    border-radius: 10px;
+}
+
+#barra-nav .responsive-nav li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #efefef;;
+}
+
+
+
 
 #nav-logo {
 
@@ -42,8 +64,6 @@ main {
     display: flex;
     justify-content: center;
     flex-grow: 1; /* Permite que el nav crezca para utilizar el espacio disponible */
-
- 
 }
 
 #list {
@@ -905,7 +925,7 @@ article #btn_next {
 
     #nav-logo img {
         height: 50px;
-       left: 100px;
+       left: 200px;
         margin: 10px 0;
     }
 
@@ -1130,6 +1150,21 @@ article #btn_next {
 
 
 @media (min-width: 480px) and (max-width: 767px) {
+
+    #nav {
+        display: none;
+    }
+
+    #nav-logo img {
+        height: 80px;
+        left: 250px;
+        margin: 10px 0;
+    }
+
+    #barra-nav .menu.responsive {
+    width: 200px;
+    height: 100px;
+}
        
     #home #img-home #text-home{
         font-size: 2.2em;
@@ -1318,6 +1353,16 @@ article #btn_next {
 }
 
 @media (min-width:768px ) and (max-width: 996px) {
+  
+    #nav {
+        display: none;
+    }
+    #nav-logo img {
+        height: 80px;
+        left: 400px;
+        margin: 10px 0;
+    }
+
     .card { 
         position: relative;
        width: 320px;
@@ -1360,6 +1405,15 @@ article #btn_next {
 }
 
 @media (min-width: 767px) and (max-width: 1279px) {
+
+    #nav {
+        display: none;
+    }
+    #nav-logo img {
+        height: 80px;
+        left: 400px;
+        margin: 10px 0;
+    }
 
     #aboutUs {
         width: 100%;
@@ -1492,6 +1546,11 @@ article #btn_next {
 
 
 @media screen and (min-width: 1279px) {
+
+
+    #barra-nav .responsive-nav{
+        display: none;
+    }
 
     #carrusel {
         display: grid;

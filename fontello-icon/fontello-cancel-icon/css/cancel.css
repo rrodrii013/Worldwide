@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello.eot?26956185');
-  src: url('../font/fontello.eot?26956185#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?26956185') format('woff2'),
-       url('../font/fontello.woff?26956185') format('woff'),
-       url('../font/fontello.ttf?26956185') format('truetype'),
-       url('../font/fontello.svg?26956185#fontello') format('svg');
+  font-family: 'cancel';
+  src: url('../font/cancel.eot?47565613');
+  src: url('../font/cancel.eot?47565613#iefix') format('embedded-opentype'),
+       url('../font/cancel.woff2?47565613') format('woff2'),
+       url('../font/cancel.woff?47565613') format('woff'),
+       url('../font/cancel.ttf?47565613') format('truetype'),
+       url('../font/cancel.svg?47565613#cancel') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,16 +14,17 @@
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?26956185#fontello') format('svg');
+    font-family: 'cancel';
+    src: url('../font/cancel.svg?47565613#cancel') format('svg');
   }
 }
 */
-[class^="icon-menu"]:before, [class*=" icon-menu"]:before {
-  font-family: "fontello";
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "cancel";
   font-style: normal;
   font-weight: normal;
-  cursor: pointer;
+  speak: never;
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
@@ -53,4 +54,4 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-menu:before { content: '\e800'; } /* '' */
+.icon-cancel-circle:before { content: '\e802'; } /* '' */

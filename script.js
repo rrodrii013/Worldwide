@@ -38,6 +38,21 @@ const OpinionUsers = async () => {
 // Llamando la función al cargar la página
 document.addEventListener('DOMContentLoaded', OpinionUsers);
 
+// RESPONSIVE MENU
+
+let menuBtn = document.querySelector('.icon-menu');
+let cancelIcon = document.querySelector('.icon-cancel-circle');
+let nav = document.querySelector('.responsive-nav');
+nav.style.display = 'none';
+menuBtn.addEventListener('click', () => {
+    nav.style.display = 'flex';
+});
+cancelIcon.addEventListener('click', () => {
+    nav.style.display = 'none'
+});
+
+
+
 
 //SCROLL
 
@@ -145,9 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
 //CARRUSEL VIAJES
 
 let index = 0;
@@ -231,13 +243,4 @@ window.addEventListener('resize', function(){
     handleResize();
     handleResize1();
 });
-
-
-
-
-
-   
-   
-   
-   
 

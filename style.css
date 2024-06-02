@@ -33,16 +33,6 @@ main {
     align-items: center;
 }
 
-#barra-nav .icon-cancel-circle {
-    position: relative;
-    font-size: 2rem;
-    margin: .5rem;
-    margin-left: 140px;
-    top: -10px;
-    color:#333;
-    cursor: pointer;
-}
-
 #barra-nav .responsive-nav {
     display: flex;
     position: absolute;
@@ -56,6 +46,16 @@ main {
     background-color: rgba(0 0 0 / 0.2);
     backdrop-filter: blur(15px);
     border-radius: 10px
+}
+
+#barra-nav .icon-cancel-circle {
+    position: absolute;
+    font-size: 1.6rem;
+    margin: .5rem;
+    margin-left: 170px;
+    top: -5px;
+    color:#333;
+    cursor: pointer;
 }
 
 #barra-nav .responsive-nav li a {

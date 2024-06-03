@@ -62,8 +62,14 @@ main {
     font-size: 1.5rem;
     text-decoration: none;
     color: #ddd;
-    padding: 15px 55px;
-    border-radius: 8px ;
+    padding: 15px 55px 2px 55px;
+}
+
+#barra-nav .responsive-nav li a:hover {
+    font-size: 1.6em;
+    color: #333 !important;
+    border-bottom: #ddd solid 3px ;
+    transition: all .5s ease-in-out;
 
 }
 
@@ -95,7 +101,7 @@ main {
     gap: 5.5rem; /* Espaciado entre elementos de la lista */
 }
 
-#list li a {
+#list a {
     padding: 50px 40px;
     font-size: 1.5rem;
     text-align: center;
@@ -103,7 +109,7 @@ main {
     color: #ddd;
 }
 
-a:hover {
+#list a:hover {
     height: 200px;
     background-color: #efefef;
     color: #333 !important;

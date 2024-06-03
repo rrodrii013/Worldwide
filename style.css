@@ -295,9 +295,6 @@ a:hover {
           }
       }
 
-
-
-
 #aboutUs #aboutUsContainer img {
    position: absolute;
     height: 100%;
@@ -342,7 +339,6 @@ a:hover {
     font-size: 3vw;
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: .2em
-
 }
 
 .country-england {
@@ -392,7 +388,6 @@ a:hover {
     letter-spacing: .60rem
 }
 
-
 .footer-card {
     display: flex;
     flex-direction: row;
@@ -425,16 +420,13 @@ a:hover {
 
 }
 
-
 .card-cost .cost {
 
     display: table-cell; /*extiende el limite del texto hasta el tamaño del contenedor*/
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    color: #ddd;
-
-
+    color: #ddd
 }
 
 #offers {
@@ -445,7 +437,6 @@ a:hover {
     letter-spacing: .5rem;
     overflow: hidden
 }
-
 
 #crono {
     display: flex;
@@ -538,11 +529,9 @@ a:hover {
     text-align: center
 }
 
-
 #offers-tarjeta h3 {
     font-size: 1.7em
 }
-
 
 #offers-tarjeta .offers-city{
 
@@ -619,7 +608,6 @@ article {
     flex-grow: 2
 }
 
-
 article #btn_next {
     position: absolute;
     margin: 140px auto ;
@@ -630,8 +618,7 @@ article #btn_next {
     font-size: 3rem;
     background-color: rgba(255, 255, 255, 0.5);
     border: none;
-    cursor: pointer ;
-
+    cursor: pointer 
 }
 
 #opinion_container {
@@ -657,27 +644,23 @@ article #btn_next {
     max-height: 25%;
     margin: 2rem;
     padding: .5rem;
-    border-radius: 10px;
-
+    border-radius: 10px
 }
 
 .opinion_card .pics_profile {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin: 5%;
+    margin: 5%
 }
 
 .opinion_card .user_opinon {
  flex-direction: column;
- max-width: 100%;
-
+ max-width: 100%
 }
 
 .opinion_card .user_name {
-
-    font-size: 2rem;
-
+    font-size: 2rem
 }
 
 .opinion_card .stars {
@@ -689,8 +672,7 @@ article #btn_next {
    .opinion_card p {
 
     font-size: 1.2rem;
-    letter-spacing: .01rem;
-
+    letter-spacing: .01rem
    }
 
    .contactt {
@@ -703,7 +685,7 @@ article #btn_next {
     margin: 20rem auto 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
    }
 
    #contact {
@@ -715,24 +697,24 @@ article #btn_next {
     height: 800px;
     width: 1100px;
     border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4)
    }
 
    #contact h2 {
     text-align: center;
     color: #eee;
-    font-size: 2em;
+    font-size: 2em
    }
 
    #namesur {
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column
    }
+
    .input-container,
    .mail {
     position: relative;
-    margin: 50px auto;
+    margin: 50px auto
   }
   
   .input-container input[type="text"],
@@ -749,7 +731,7 @@ article #btn_next {
     padding: 3px 0;
     top: 3px;
     background-color: rgba(0, 0, 0, 0.2);
-    outline: none;
+    outline: none
   }
 
   
@@ -760,7 +742,7 @@ article #btn_next {
     left: 0;
     color: #e4e1e1;
     transition: all 0.3s ease;
-    pointer-events: none;
+    pointer-events: none
   }
   
   .input-container input[type="text"]:focus ~ .label,
@@ -934,17 +916,17 @@ article #btn_next {
         margin:0
     }
 
-    #barra-nav {
-        width: 100vw;
-    }
-
     #nav {
         display: none;
     }
 
+    #barra-nav {
+        height: 90px;
+    }
+
     #nav-logo img {
-        height: 50px;
-       left: 200px;
+        max-height: 70px;
+        left: 20vw;
         margin: 10px 0;
     }
 
@@ -1170,14 +1152,18 @@ article #btn_next {
 
 @media (min-width: 480px) and (max-width: 767px) {
 
-    #nav {
-        display: none;
+    #barra-nav {
+        height: 100px;
     }
 
     #nav-logo img {
-        height: 80px;
-        left: 250px;
+        max-height: 80px;
+        left: 30vw;
         margin: 10px 0;
+    }
+
+    #nav {
+        display: none;
     }
 
     #barra-nav .menu.responsive {
@@ -1425,13 +1411,18 @@ article #btn_next {
 
 @media (min-width: 767px) and (max-width: 1279px) {
 
-    #nav {
-        display: none;
+    #barra-nav {
+        height: 110px
     }
+
     #nav-logo img {
-        height: 80px;
-        left: 400px;
-        margin: 10px 0;
+        max-height: 90px;
+        left: 40vw;
+        margin: 10px 0
+    }
+
+    #nav {
+        display: none
     }
 
     #aboutUs {

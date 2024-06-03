@@ -33,6 +33,29 @@ main {
     align-items: center;
 }
 
+#barra-nav .responsive-nav li a {
+    position: relative;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ddd;
+    padding: 15px 55px 2px 55px;
+}
+
+.responsive-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Altura de la línea inferior */
+    background-color: #f60c49; 
+    bottom: -2px; 
+    left: 0;
+    transition: width 0.4s ease-in-out; 
+}
+
+.responsive-nav a:hover::after {
+    width: 100%;
+}
+
 #barra-nav .responsive-nav {
     display: flex;
     position: absolute;
@@ -56,21 +79,6 @@ main {
     top: -5px;
     color:#333;
     cursor: pointer;
-}
-
-#barra-nav .responsive-nav li a {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #ddd;
-    padding: 15px 55px 2px 55px;
-}
-
-#barra-nav .responsive-nav li a:hover {
-    font-size: 1.6em;
-    color: #333 !important;
-    border-bottom: #ddd solid 3px ;
-    transition: all .5s ease-in-out;
-
 }
 
 #nav-logo {

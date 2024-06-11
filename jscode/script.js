@@ -165,6 +165,11 @@ let responsiveWindow = window.innerWidth;
 let carrusel;
 let carrusel767;
 
+// If window < 767 carruselMil star when the page load.
+window.addEventListener('load', (event) => {
+    carruselMil();
+})
+
 function carruselTop() {
     document.querySelector('.active').classList.remove('active');
     

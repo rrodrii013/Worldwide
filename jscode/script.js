@@ -17,9 +17,7 @@ const OpinionUsers = async () => {
                 const img = tarjeta.querySelector('.pics_profile');
                 const userName = tarjeta.querySelector('.user_name');
 
-            
                 img.src = opinion.picture.large;
-                img.alt = 'Foto Usuario';
 
                 //Coloca cada nombre en la variable userName
                 userName.textContent = `${opinion.name.first} ${opinion.name.last}`

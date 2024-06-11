@@ -52,9 +52,6 @@ cancelIcon.addEventListener('click', () => {
 });
 
 
-
-
-
 //SCROLL
 
 let btnHome = document.querySelector('.btn-home');

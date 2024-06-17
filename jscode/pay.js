@@ -1,41 +1,3 @@
-/*import KEYS from "../jscode/keys.js";
-
-let cards = document.querySelectorAll('.card');
-let name = document.querySelectorAll('.country-name');
-let imgs = document.querySelectorAll(".country");
-const templateTours = document.getElementById("tours-template");
-const fragment = document.createDocumentFragment();
-const options = {headers: {Authorization: `Bearer ${KEYS.secret}`}}
-
-let products, prices;
-Promise.all([
-    fetch("https://api.stripe.com/v1/products", options),
-    fetch("https://api.stripe.com/v1/prices", options)
-])
-
-.then(responses => Promise.all(responses.map(res => res.json())))
-.then(json => {
-    products = json[0].data
-    prices = json[1].data
-        prices.forEach((el, index) => {
-            let productData = products.filter(product => product.id === el.product);
-            let imgToAdd = productData[0].images[0];
-
-                if(productData.length > 0 && index < cards.length && index < imgs.length) {
-                cards.forEach((card, cardIndex) => {
-                    if(cardIndex === index) {
-                        let nameData = productData[0].name;
-                        card.innerHTML = nameData.toUpperCase();
-                        imgs.src = imgToAdd[index]
-                    }
-
-                })
-          
-            }
-        })
-})
-
-.catch(error => console.log('Error:' + error))*/
 
 import KEYS from "../jscode/keys.js";
 
@@ -56,24 +18,29 @@ Promise.all([
         let productData = products.filter(product => product.id === el.product);
 
         if (productData.length > 0 && index < cards.length) {
+
+            //where i'm call the information
             let nameData = productData[0].name;
             let imgToAdd = productData[0].images[0];
 
-            // Encuentra los elementos dentro de la tarjeta correspondiente
+            //where i'll put the information
             let card = cards[index];
-            let nameElement = card.querySelector('.country-name');
-            let imgElement = card.querySelector('.country');
+            let nameElement = card.querySelector(".country-name");
+            let imgElement = card.querySelector(".country");
 
-            // Actualiza el contenido del nombre y la imagen
-            if (nameElement) {
+            //take the information 
+
+            if(nameElement) {
                 nameElement.innerHTML = nameData.toUpperCase();
             }
-
-            if (imgElement) {
+            if(imgElement) {
                 imgElement.src = imgToAdd;
             }
+
+
+
         }
-    });
+    })
 })
 .catch(error => console.error('Error fetching data:', error));
 

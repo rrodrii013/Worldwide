@@ -15,8 +15,6 @@ Promise.all([
     products = json[0].data;
     prices = json[1].data;
 
-    console.log(prices);
-
     prices.forEach((el, index) => {
         // I connected the arrays
         let productData = products.filter(product => product.id === el.product);
@@ -28,7 +26,7 @@ Promise.all([
             let imgToAdd = productData[0].images[0];
             let usd = el.currency.toUpperCase();
             let priceToAdd = moneyValor(el.unit_amount_decimal); 
-            
+
             //where i'll put the information
             let card = cards[index];
             let nameElement = card.querySelector(".country-name");
@@ -54,16 +52,10 @@ Promise.all([
 })
 .catch(error => console.error('Error fetching data:', error));
 
-    /*card = ` <div class="card">
-    <img src="" alt="">
-    <h2 class="country-name">ESPAÑA</h2>
-        <div class="footer-card">
-            <img src="/images/ubicacion.png"> 
-            <h2>Europa</h2>
-            <img src="/images/calendario.png" alt="">
-            <h2>7 días</h2>
-            <div class="card-cost">
-                <h2 class="cost"> USD 750</h2>
-            </div>
-        </div>
-    </div>` */ 
+
+document.addEventListener("click", e => {
+
+    if(e.target.matches(".card *")) {  //* select all the .card´s childs
+        alert("It´s ok")
+    }
+})

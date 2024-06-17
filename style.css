@@ -335,7 +335,7 @@ main {
 
 .card {
     border-radius: 10px;
-    cursor: default;
+    cursor: pointer;
     position: relative;
 }
 

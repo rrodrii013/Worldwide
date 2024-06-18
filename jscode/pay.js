@@ -29,6 +29,7 @@ Promise.all([
 
             //where i'll put the information
             let card = cards[index];
+            card.setAttribute("data-price", el.id);
             let nameElement = card.querySelector(".country-name");
             let imgElement = card.querySelector(".country");
             let priceElement = card.querySelector(".cost");
@@ -56,6 +57,20 @@ Promise.all([
 document.addEventListener("click", e => {
 
     if(e.target.matches(".card *")) {  //* select all the .card´s childs
-        alert("It´s ok")
+        let priceId = e.target.parentElement.getAttribute("data-price");
+        console.log(priceId);
+
+        Stripe(KEYS.public).redirectToCheckout({
+            lineItems: [{
+                price: priceId,
+                quantity: 1
+            }],
+            mode: "payment", //Use payment for a single payment. If u want that will be mensual you should use "suscribtion"
+            successUrl:"http://127.0.0.1:5500/assets/cancel.html" , //We find this with window.location.href
+            cancelUrl:"http://127.0.0.1:5500/assets/sucess.html"
+        })
+        .then(err => {
+            err = "Ocurrio un error:" + err;
+        })
     }
 })

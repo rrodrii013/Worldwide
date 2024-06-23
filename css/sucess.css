@@ -22,8 +22,12 @@ body {
 }
 
 .content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
+  gap: 15px;
 }
 
 .fa-circle-check {
@@ -35,17 +39,34 @@ body {
 p {
   color: #fff;
   font-size: 2em;
-}
+  }
 
 a {
   text-decoration: none;
 }
 
-span {
-  color: #fff;
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+    transition: all ease-in-out .3s;
+}
+
+.btn:hover{
   cursor: pointer;
+ transform: scale(1.1);
+}
+
+span {
+  position: relative;
+  color: #403e3e;
+  font-size: 1.2rem;
 }
 
 span:hover {
-  color: #ccc;
+  color: #676363;
 }

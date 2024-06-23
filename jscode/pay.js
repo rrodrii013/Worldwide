@@ -58,7 +58,6 @@ document.addEventListener("click", e => {
 
     if(e.target.matches(".card *")) {  //* select all the .card´s childs
         let priceId = e.target.parentElement.getAttribute("data-price");
-        console.log(priceId);
 
         Stripe(KEYS.public).redirectToCheckout({
             lineItems: [{

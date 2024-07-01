@@ -1,6 +1,7 @@
 .hidden {
     overflow: hidden;
 }
+
 .load-center {
     display: flex;
     justify-content: center;

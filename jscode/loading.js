@@ -1,9 +1,7 @@
-window.addEventListener("load", function () {
-  function load() {
-    setTimeout(() => {
-      console.log("I´m ready");
-    }, 3000);
-  }
+window.onload = function () {
+  $("#onload").fadeOut();
+  $("body").removeClass("hidden");
+}
 
-  load();
-});
+
+

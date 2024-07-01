@@ -19,13 +19,13 @@ Promise.all([
       let productData = products.filter((product) => product.id === el.product);
 
       if (productData.length > 0 && index < cards.length) {
-        //where i'm call the information
+        //here i'm call the information
         let nameData = productData[0].name;
         let imgToAdd = productData[0].images[0];
         let usd = el.currency.toUpperCase();
         let priceToAdd = moneyValor(el.unit_amount_decimal);
 
-        //where i'll put the information
+        //here i'll put the information
         let card = cards[index];
         card.setAttribute("data-price", el.id);
         let nameElement = card.querySelector(".country-name");

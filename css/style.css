@@ -455,6 +455,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor:pointer;
     transition: all ease-out .5s
 }
 
@@ -469,6 +470,7 @@ main {
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    cursor:pointer;
     transition: all ease-in-out .5s
 
 }

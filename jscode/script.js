@@ -156,7 +156,7 @@ let carrusel;
 let carrusel767;
 
 // If window < 767 carruselMil star when the page load.
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
   carruselMil();
 });
 

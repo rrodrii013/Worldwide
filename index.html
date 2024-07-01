@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/loading.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/fontello-icon/fontello-cancel-icon/css/cancel.css">
     <link rel="stylesheet" href="/fontello-icon/css/fontello.css">
     <title>AdventureTravel | Viaja al rededor del mundo</title>
 </head>
-<body>
+<body class="hidden">
+
+    <div class="load-center">
+        <div class="lds-dual-ring"></div>
+    </div>
+
    
     <div id="barra-nav">
         <i class="icon-menu"></i>
@@ -373,6 +379,7 @@
             
     </main>
 
+    <script lenguaje = "javascript" type="text/javascript" src="jscode/loading.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
     <script lenguaje = "javascript" src="jscode/pay.js" type="module"></script>
     <script lenguaje = "javascript" src="jscode/keys.js" type="module"></script>

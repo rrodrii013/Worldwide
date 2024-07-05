@@ -7,82 +7,97 @@ let cards = document.querySelectorAll(".card");
 let moneyValor = (num) => `${num.slice(0, -2)}`;
 const options = { headers: { Authorization: `Bearer ${KEYS.secret}` } };
 
-let products, prices;
-Promise.all([
-  fetch("https://api.stripe.com/v1/products", options),
-  fetch("https://api.stripe.com/v1/prices", options),
-])
-  .then((responses) => Promise.all(responses.map((res) => res.json())))
-  .then((json) => {
-
-    console.log(json);
-    products = json[0].data;
-    prices = json[1].data;
+  // We'll save data here
+let products = [];
+let prices = [];
 
 
+  // Stripe allow 10 calls to the server, bt we have to call more times
+const fetchAllProducts = async () => {
+  let hasMore = true;
+  let startingAfter = null;
 
-    let finallyProducts = products.slice();
-    let finallyPrices = prices.slice();
+  while (hasMore) {
+    const response = await fetch(`https://api.stripe.com/v1/products?limit=10${startingAfter ? `&starting_after=${startingAfter}` : ''}`, options);
+    const data = await response.json();
 
-    finallyProducts.splice(0, 2);
-    finallyPrices.splice(0, 2);
- 
+    products = products.concat(data.data);
+    hasMore = data.has_more;
+    if (hasMore) {
+      startingAfter = data.data[data.data.length - 1].id;
+    }
+  }
+};
 
-    console.log(finallyProducts);
-    console.log(finallyPrices);
+const fetchAllPrices = async () => {
+  let hasMore = true;
+  let startingAfter = null;
 
-             //T E S T S
-    //packs's names
-    /*let grandeItalia = products[0].name //Grande Italia
-    console.log(grandeItalia)
-    let grandItaliaPrice = prices[1].currency + ' ' + prices[1].unit_amount_decimal //Grande Italia price
-    console.log(grandItaliaPrice)
+  while (hasMore) {
+    const response = await fetch(`https://api.stripe.com/v1/prices?limit=10${startingAfter ? `&starting_after=${startingAfter}` : ''}`, options);
+    const data = await response.json();
 
-   
+    prices = prices.concat(data.data);
+    hasMore = data.has_more;
+    if (hasMore) {
+      startingAfter = data.data[data.data.length - 1].id;
+    }
+  }
+};
 
-    let outProducts = products.shift();
-    let outPrices = prices.shift();
+const initialize = async () => {
+  await Promise.all([fetchAllProducts(), fetchAllPrices()]);
 
-    console.log(products)
-    console.log(prices) */
+  console.log("Products:", products);
+  console.log("Prices:", prices);
 
+  console.log("Products length:", products.length);
+  console.log("Prices length:", prices.length);
 
+  if (!products || !prices) {
+    throw new Error("Missing data from API responses");
+  }
 
-    finallyPrices.forEach((el, index) => {
-      // I connected the arrays
-      let productData = finallyProducts.filter((product) => product.id === el.product);
+  let finallyProducts = products.slice();
+  let finallyPrices = prices.slice();
 
-      if (productData.length > 0 && index < cards.length) {
-        //here i'm call the information
-        let nameData = productData[0].name;
-        let imgToAdd = productData[0].images[0];
-        let usd = el.currency.toUpperCase();
-        let priceToAdd = moneyValor(el.unit_amount_decimal);
+  finallyProducts.splice(0, 3);
+  finallyPrices.splice(0, 3);
 
-        //here i'll put the information
-        let card = cards[index];
-        card.setAttribute("data-price", el.id);
-        let nameElement = card.querySelector(".country-name");
-        let imgElement = card.querySelector(".country");
-        let priceElement = card.querySelector(".cost");
+  console.log("Modified Products:", finallyProducts);
+  console.log("Modified Prices:", finallyPrices);
 
-        //take the information and put in the design place
+  finallyPrices.forEach((el, index) => {
+    let productData = finallyProducts.filter((product) => product.id === el.product);
 
-        if (nameElement) {
-          nameElement.innerHTML = nameData.toUpperCase();
-        }
+    if (productData.length > 0 && index < cards.length) {
+      let nameData = productData[0].name;
+      let imgToAdd = productData[0].images[0];
+      let usd = el.currency.toUpperCase();
+      let priceToAdd = moneyValor(el.unit_amount_decimal);
 
-        if (imgElement) {
-          imgElement.src = imgToAdd;
-        }
+      let card = cards[index];
+      card.setAttribute("data-price", el.id);
+      let nameElement = card.querySelector(".country-name");
+      let imgElement = card.querySelector(".country");
+      let priceElement = card.querySelector(".cost");
 
-        if (priceElement) {
-          priceElement.innerHTML = `${usd} ${priceToAdd}`;
-        }
+      if (nameElement) {
+        nameElement.innerHTML = nameData.toUpperCase();
       }
-    });
-  })
-  .catch((error) => console.error("Error fetching data:", error));
+
+      if (imgElement) {
+        imgElement.src = imgToAdd;
+      }
+
+      if (priceElement) {
+        priceElement.innerHTML = `${usd} ${priceToAdd}`;
+      }
+    }
+  });
+};
+
+initialize().catch((error) => console.error("Error fetching data:", error));
 
 document.addEventListener("click", (e) => {
   if (e.target.matches(".card *")) {

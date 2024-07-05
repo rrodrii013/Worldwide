@@ -48,12 +48,6 @@ const fetchAllPrices = async () => {
 const initialize = async () => {
   await Promise.all([fetchAllProducts(), fetchAllPrices()]);
 
-  console.log("Products:", products);
-  console.log("Prices:", prices);
-
-  console.log("Products length:", products.length);
-  console.log("Prices length:", prices.length);
-
   if (!products || !prices) {
     throw new Error("Missing data from API responses");
   }
@@ -63,9 +57,6 @@ const initialize = async () => {
 
   finallyProducts.splice(0, 3);
   finallyPrices.splice(0, 3);
-
-  console.log("Modified Products:", finallyProducts);
-  console.log("Modified Prices:", finallyPrices);
 
   finallyPrices.forEach((el, index) => {
     let productData = finallyProducts.filter((product) => product.id === el.product);

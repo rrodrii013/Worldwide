@@ -1,8 +1,7 @@
 import KEYS from "../jscode/keys.js";
 
-let offerCard1 = document.querySelector(".tarjeta1");
-let offerCard2 = document.querySelector(".tarjeta2");
-let offerCard3 = document.querySelector(".tarjeta3");
+
+let tittleOffers = document.querySelectorAll(".tarjeta-title");
 let cards = document.querySelectorAll(".card");
 let moneyValor = (num) => `${num.slice(0, -2)}`;
 const options = { headers: { Authorization: `Bearer ${KEYS.secret}` } };
@@ -55,18 +54,45 @@ const initialize = async () => {
   let finallyProducts = products.slice();
   let finallyPrices = prices.slice();
 
-  finallyProducts.splice(0, 3);
-  finallyPrices.splice(0, 3);
+    // Array of offers
+  let offerProducts = finallyProducts.splice(0, 3);
+  let offerPrices = finallyPrices.splice(0, 3);
+
+    offerPrices.forEach((el, index) => {
+      let productOfferData = offerProducts.filter((product) => product.id === el.product);
+
+      //  I'm collecting the information about offers
+        let nameOfferData = productOfferData[0].name;
+        let usd = el.currency.toUpperCase();
+        let priceToAdd = moneyValor(el.unit_amount_decimal);
+      
+        // I´m declaring the places where i´ll put the information about offers
+        let pricesElement = document.querySelectorAll(".tarjeta-cost");
+
+
+        if(nameOfferData) {
+          nameOfferData.innerHTML = productOfferData[0].name;
+
+        }
+        if (pricesElement) {
+          pricesElement.innerHTML = `${usd} ${priceToAdd}`;
+
+        }
+    })
+
 
   finallyPrices.forEach((el, index) => {
     let productData = finallyProducts.filter((product) => product.id === el.product);
 
     if (productData.length > 0 && index < cards.length) {
+
+      //  Here I'm collect the information
       let nameData = productData[0].name;
       let imgToAdd = productData[0].images[0];
       let usd = el.currency.toUpperCase();
       let priceToAdd = moneyValor(el.unit_amount_decimal);
 
+      //  Here I'll put the information
       let card = cards[index];
       card.setAttribute("data-price", el.id);
       let nameElement = card.querySelector(".country-name");

@@ -57,6 +57,8 @@ const initialize = async () => {
   let offerProducts = finallyProducts.splice(0, 3);
   let offerPrices = finallyPrices.splice(0, 3);
 
+
+  // OFFERS SECTION
   offerPrices.forEach((el, index) => {
       let productOfferData = offerProducts.filter((product) => product.id === el.product);
 
@@ -86,6 +88,7 @@ const initialize = async () => {
   });
 
 
+  //  TRAVEL SECTION
   finallyPrices.forEach((el, index) => {
     let productData = finallyProducts.filter((product) => product.id === el.product);
 
@@ -120,6 +123,26 @@ const initialize = async () => {
 };
 
 initialize().catch((error) => console.error("Error fetching data:", error));
+document.addEventListener("click", (eventt) => {
+  if (eventt.target.matches(".tarjeta *")){
+    let priceID = eventt.target.parentElement.getAttribute("data-price");
+    Stripe(KEYS.public)
+    .redirectToCheckout({
+      lineItems: [
+        {
+          price: priceID,
+          quantity: 1,
+        },
+      ],
+      mode: "payment", //Use payment for a single payment. If u want that will be mensual you should use "suscribtion"
+      successUrl: "http://127.0.0.1:5500/assets/sucess.html",  //We find this with window.location.href
+      cancelUrl: "http://127.0.0.1:5500/assets/cancel.html",
+    })
+    .then((err) => {
+      err = "Ocurrio un error:" + err;
+    });
+  }
+});
 
 document.addEventListener("click", (e) => {
   if (e.target.matches(".card *")) {

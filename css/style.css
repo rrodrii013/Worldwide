@@ -997,14 +997,14 @@ article #btn_next {
         height: 650px !important;
         width: 90% !important;
         margin-bottom: 100px;
-        overflow: hidden
+        overflow: visible ;
     }
 
     #tarjeta-bestprice img {
         width: 30%;
         height: 150px;
         right: -30px;
-        top: -65px
+        top: -65px;
     }
 
     #opinion{
@@ -1188,7 +1188,7 @@ article #btn_next {
 
         #offers-tarjeta .tarjeta{ 
         margin-bottom: 80px;
-        width: 80%;
+        width: 80% !important;
         }
 
         .tarjeta-title {

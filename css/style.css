@@ -444,8 +444,7 @@ main {
 }
 
 
-#offers-tarjeta .tarjeta1,
-#offers-tarjeta .tarjeta3{
+#offers-tarjeta .tarjeta{
     background-color: #e4e1e1;
     border: solid 1px #e4e1e1;
     border-radius: 10px;
@@ -457,22 +456,6 @@ main {
     justify-content: center;
     cursor:pointer;
     transition: all ease-out .5s
-}
-
-
-#offers-tarjeta .tarjeta2{
-    background-color: #e4e1e1 ;
-    border: solid 1px #e4e1e1;
-    border-radius: 10px;
-    height: 815px;
-    width: 530px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    cursor:pointer;
-    transition: all ease-in-out .5s
-
 }
 
 #offers-tarjeta .tarjeta-title {
@@ -540,9 +523,7 @@ main {
     font-size: 3em
 }
 
-#offers-tarjeta .tarjeta1:hover,
-#offers-tarjeta .tarjeta2:hover,
-#offers-tarjeta .tarjeta3:hover {
+#offers-tarjeta .tarjeta:hover {
     border: solid 2px #101942;
     transform: scale(1.03)
 }
@@ -1012,18 +993,11 @@ article #btn_next {
         font-size: 2em !important;
         }
 
-    #offers-tarjeta .tarjeta1,
-    #offers-tarjeta .tarjeta3 {
+    #offers-tarjeta .tarjeta {
         height: 650px !important;
         width: 90% !important;
         margin-bottom: 100px;
         overflow: hidden
-    }
-
-    #offers-tarjeta .tarjeta2 {
-        height: 650px !important;
-        width: 90% !important;
-        margin-bottom: 100px
     }
 
     #tarjeta-bestprice img {
@@ -1212,9 +1186,7 @@ article #btn_next {
             flex-direction: column
         }
 
-        #offers-tarjeta .tarjeta1,
-        #offers-tarjeta .tarjeta2,
-        #offers-tarjeta .tarjeta3{ 
+        #offers-tarjeta .tarjeta{ 
         margin-bottom: 80px;
         width: 80%;
         }
@@ -1512,9 +1484,7 @@ article #btn_next {
         flex-direction: column;
     }
     
-    #offers-tarjeta .tarjeta1,
-    #offers-tarjeta .tarjeta2,
-    #offers-tarjeta .tarjeta3{ 
+    #offers-tarjeta .tarjeta{ 
     width: 60%;
     height: 700px;
     margin-bottom: 80px;

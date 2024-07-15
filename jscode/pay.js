@@ -1,7 +1,6 @@
 import KEYS from "../jscode/keys.js";
 
-
-let tittleOffers = document.querySelectorAll(".tarjeta-title");
+let offerCards = document.querySelectorAll(".tarjeta");
 let cards = document.querySelectorAll(".card");
 let moneyValor = (num) => `${num.slice(0, -2)}`;
 const options = { headers: { Authorization: `Bearer ${KEYS.secret}` } };
@@ -58,27 +57,33 @@ const initialize = async () => {
   let offerProducts = finallyProducts.splice(0, 3);
   let offerPrices = finallyPrices.splice(0, 3);
 
-    offerPrices.forEach((el, index) => {
+  offerPrices.forEach((el, index) => {
       let productOfferData = offerProducts.filter((product) => product.id === el.product);
 
+      if(productOfferData.length > 0 && index < offerCards.length) {
+
       //  I'm collecting the information about offers
-        let nameOfferData = productOfferData[0].name;
-        let usd = el.currency.toUpperCase();
-        let priceToAdd = moneyValor(el.unit_amount_decimal);
-      
-        // I´m declaring the places where i´ll put the information about offers
-        let pricesElement = document.querySelectorAll(".tarjeta-cost");
+      let nameOfferData = productOfferData[0].name;
+      let usd = el.currency.toUpperCase();
+      let priceToAdd = moneyValor(el.unit_amount_decimal);
+    
+      // I´m declaring the places where i´ll put the information about offers
+      let offerCard = offerCards[index];
+      offerCard.setAttribute("data-price", el.id);
+      let tittleOffers = document.querySelectorAll(".tarjeta-title");
+      let pricesElement = document.querySelectorAll(".tarjeta-cost");
 
 
-        if(nameOfferData) {
-          nameOfferData.innerHTML = productOfferData[0].name;
+      if (tittleOffers[index]) {
+        tittleOffers[index].innerHTML = nameOfferData;
+      }
+    
+      if (pricesElement[index]) {
+        pricesElement[index].innerHTML = `${usd} ${priceToAdd}`;
+      }
+    }
 
-        }
-        if (pricesElement) {
-          pricesElement.innerHTML = `${usd} ${priceToAdd}`;
-
-        }
-    })
+  });
 
 
   finallyPrices.forEach((el, index) => {
@@ -120,8 +125,6 @@ document.addEventListener("click", (e) => {
   if (e.target.matches(".card *")) {
     //* select all the .card´s childs
     let priceId = e.target.parentElement.getAttribute("data-price");
-
-    console.log(priceId);
 
     Stripe(KEYS.public)
       .redirectToCheckout({

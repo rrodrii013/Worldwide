@@ -640,6 +640,29 @@ article #btn_next {
     align-items: center
    }
 
+   .email-sent {
+    height: 70%;
+    width: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.5em;
+    background-color: red;
+
+   }
+
+   .email-sent-ok {
+    margin-top: 100px;
+    width: 170px;
+    height: 70px;
+    border-radius: 8px;
+    font-size: .8em;
+    cursor: pointer;
+   }
+
    #contact {
     position: relative;
     display: flex;

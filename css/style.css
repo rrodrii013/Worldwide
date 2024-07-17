@@ -906,7 +906,8 @@ article #btn_next {
    }
 
    .list a:hover {
-    background-color: transparent
+    background-color: transparent;
+    color: #cac7c7;
    }
 
    .footer-fot{

@@ -637,7 +637,7 @@ article #btn_next {
     margin: 20rem auto 0 auto;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
    }
 
    .email-sent {
@@ -650,12 +650,34 @@ article #btn_next {
     text-align: center;
     border-radius: 10px;
     font-size: 1.5em;
-    background-color: red;
-
+    background-color: #f8f1f1;
+    z-index: -1 ;
    }
 
+   .img-bgr-green {
+    position: relative;
+    top: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6ab46a;
+   }
+
+   .img-bgr-green img {
+    height: 40%;
+    border-radius: 50%;
+   }
+
+   .content-email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
    .email-sent-ok {
-    margin-top: 100px;
+    margin-top: 70px;
     width: 170px;
     height: 70px;
     border-radius: 8px;
@@ -664,16 +686,29 @@ article #btn_next {
    }
 
    #contact {
-    position: relative;
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: 2rem;
     margin: 300px auto;
     height: 800px;
     width: 1100px;
     border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.4)
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0
    }
+
+   .hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Transición de 0.5 segundos */
+  }
+
+  .visible {
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Asegura que la transición se mantenga en el estado visible */
+  }
 
    #contact h2 {
     text-align: center;
@@ -932,7 +967,6 @@ article #btn_next {
        border-radius: 0;
        margin: auto;
        overflow: hidden
-       
     }
 
     #aboutUs #aboutUsContainer img {

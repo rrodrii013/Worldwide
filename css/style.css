@@ -640,56 +640,10 @@ article #btn_next {
     align-items: center;
    }
 
-   .email-sent {
-    height: 70%;
-    width: 50%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 10px;
-    font-size: 1.5em;
-    background-color: #f8f1f1;
-    z-index: -1 ;
-   }
-
-   .img-bgr-green {
-    position: relative;
-    top: 0;
-    margin-bottom: 40px;
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #6ab46a;
-   }
-
-   .img-bgr-green img {
-    height: 40%;
-    border-radius: 50%;
-   }
-
-   .content-email{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   }
-   .email-sent-ok {
-    margin-top: 70px;
-    width: 170px;
-    height: 70px;
-    border-radius: 8px;
-    font-size: .8em;
-    cursor: pointer;
-   }
-
    #contact {
     display: flex;
     position: relative;
     flex-direction: column;
-    gap: 2rem;
     margin: 300px auto;
     height: 800px;
     width: 1100px;
@@ -697,18 +651,6 @@ article #btn_next {
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 0
    }
-
-   .hidden {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Transición de 0.5 segundos */
-  }
-
-  .visible {
-    display: flex;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Asegura que la transición se mantenga en el estado visible */
-  }
 
    #contact h2 {
     text-align: center;
@@ -839,6 +781,89 @@ article #btn_next {
     border: 2px solid #f72c2c
    }
    
+   .email-sent {
+    height: 70%;
+    width: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #f8f1f1;
+    z-index: -1 ;
+   }
+
+   .img-bgr-green {
+    margin: 0;
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6ab46a;
+   }
+
+   .img-bgr-green img {
+    height: 40%;
+    border-radius: 50%;
+   }
+
+   .content-email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8em;
+    margin-top: 80px;
+   }
+
+   .email-sent-ok {
+    margin: 70px;
+    width: 170px;
+    height: 70px;
+    border-radius: 8px;
+    font-size: .8em;
+    cursor: pointer;
+    padding: 0.8em 1.8em;
+    border: 2px solid #1f1d1d;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #1d1c1c;
+    cursor: pointer
+   }
+   
+   .email-sent-ok:before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #6ab46a;
+    transition: .5s ease;
+    display: block;
+    z-index: -1
+   }
+   
+   .email-sent-ok:hover::before {
+    width: 105%
+   }
+   
+   .email-sent-ok:hover {
+    color: #111;
+    border: 2px solid #d5d0d0
+   }
+
    footer {
     position: relative;
     background-color: #094469;

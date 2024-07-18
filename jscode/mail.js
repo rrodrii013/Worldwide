@@ -3,15 +3,35 @@ const emailSent = document.querySelector(".email-sent");
 const contacDiv = document.getElementById("contact");
 const aceptBack = document.querySelector(".email-sent-ok");
 
+let inputs = document.querySelectorAll("#input");
+let waring = document.querySelector(".required");
+
+
 
 btn.addEventListener("click", () => {
-    contacDiv.style.zIndex = -1;
-    contacDiv.style.display = "none";
 
-    setTimeout(() => {
-        emailSent.style.display = "flex";
-        emailSent.style.zIndex = 0;
-    }, 600)
+    let inputFull = true;
+
+    inputs.forEach(input => {
+        const inputt = input.value.trim();
+        if (inputt === '') {
+            inputFull = false;
+        }
+    });
+
+   
+        if (!inputFull) {
+            waring.innerHTML = "Por favor, completa todos los campos."
+        } else  { 
+            contacDiv.style.zIndex = -1;
+            contacDiv.style.display = "none";
+        
+            setTimeout(() => {
+                emailSent.style.display = "flex";
+                emailSent.style.zIndex = 0;
+            }, 600)
+
+        }
 })
 
 aceptBack.addEventListener("click", () => {
@@ -21,7 +41,11 @@ aceptBack.addEventListener("click", () => {
     setTimeout(() => {
         contacDiv.style.display = "flex";
         contacDiv.style.zIndex = 0;
+        input.value = '';
     }, 600)
 
-})
+});
+
+
+
 

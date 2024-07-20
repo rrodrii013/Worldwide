@@ -92,6 +92,10 @@ const initialize = async () => {
   finallyPrices.forEach((el, index) => {
     let productData = finallyProducts.filter((product) => product.id === el.product);
 
+    // Calling product's description 
+    let descriptionData = productData[0].description;
+    console.log(descriptionData)
+
     if (productData.length > 0 && index < cards.length) {
 
       //  Here I'm collect the information
@@ -123,8 +127,10 @@ const initialize = async () => {
 };
 
 initialize().catch((error) => console.error("Error fetching data:", error));
+
 document.addEventListener("click", (eventt) => {
   if (eventt.target.matches(".tarjeta *")){
+
     let priceID = eventt.target.parentElement.getAttribute("data-price");
     Stripe(KEYS.public)
     .redirectToCheckout({

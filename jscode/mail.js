@@ -5,6 +5,7 @@ const aceptBack = document.querySelector(".email-sent-ok");
 
 let inputs = document.querySelectorAll("#input");
 let waring = document.querySelector(".required");
+let inputClean = '';
 
 
 
@@ -35,13 +36,18 @@ btn.addEventListener("click", () => {
 })
 
 aceptBack.addEventListener("click", () => {
+    
+    // Cleanig data
+    inputs.forEach(input => {
+        input.value = inputClean
+    });
+
     emailSent.style.zIndex = -1;
     emailSent.style.display = "none";
     
     setTimeout(() => {
         contacDiv.style.display = "flex";
         contacDiv.style.zIndex = 0;
-        input.value = '';
     }, 600)
 
 });

@@ -42,6 +42,9 @@ aceptBack.addEventListener("click", () => {
         input.value = inputClean
     });
 
+    // If waring is true, we remove it
+    waring.style.display = "none";
+
     emailSent.style.zIndex = -1;
     emailSent.style.display = "none";
     

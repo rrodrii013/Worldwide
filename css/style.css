@@ -339,6 +339,11 @@ main {
     position: relative;
 }
 
+.card:hover {
+    background-color: rgba(29, 28, 28, 0.3);
+    z-index: 2;
+}
+
 .country {
     display: block;
     width: 100%;
@@ -1247,7 +1252,7 @@ article #btn_next {
         display: inline-block;
         margin-right: 20px
         }
-
+        
         .country-name{
             position: absolute;
            font-size: 3.5em;

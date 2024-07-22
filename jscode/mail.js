@@ -37,7 +37,7 @@ btn.addEventListener("click", () => {
 
 aceptBack.addEventListener("click", () => {
     
-    // Cleanig data
+    // Cleaning data
     inputs.forEach(input => {
         input.value = inputClean
     });

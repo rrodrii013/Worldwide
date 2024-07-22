@@ -1,5 +1,6 @@
 import KEYS from "../jscode/keys.js";
 
+let cardContainer = document.getElementById("carrusel");
 let offerCards = document.querySelectorAll(".tarjeta");
 let cards = document.querySelectorAll(".card");
 let moneyValor = (num) => `${num.slice(0, -2)}`;
@@ -92,11 +93,15 @@ const initialize = async () => {
   finallyPrices.forEach((el, index) => {
     let productData = finallyProducts.filter((product) => product.id === el.product);
 
-    // Calling product's description 
-    let descriptionData = productData[0].description;
-    console.log(descriptionData)
-
     if (productData.length > 0 && index < cards.length) {
+
+      // Calling product's description 
+      let descriptionData = productData[0].description;
+
+      // Create and add the description element
+      const description = document.createElement('div');
+      description.classList.add('card-description');
+      description.textContent = descriptionData;
 
       //  Here I'm collect the information
       let nameData = productData[0].name;
@@ -122,6 +127,8 @@ const initialize = async () => {
       if (priceElement) {
         priceElement.innerHTML = `${usd} ${priceToAdd}`;
       }
+
+      card.appendChild(description);
     }
   });
 };

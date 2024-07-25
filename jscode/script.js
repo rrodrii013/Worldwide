@@ -1,4 +1,4 @@
-//A P I
+//A P I OPINIONS
 
 const OpinionUsers = async () => {
   try {
@@ -33,19 +33,6 @@ const OpinionUsers = async () => {
 
 // Llamando la función al cargar la página
 document.addEventListener("DOMContentLoaded", OpinionUsers);
-
-// RESPONSIVE MENU
-
-let menuBtn = document.querySelector(".icon-menu");
-let cancelIcon = document.querySelector(".icon-cancel-circle");
-let nav = document.querySelector(".responsive-nav");
-nav.style.display = "none";
-menuBtn.addEventListener("click", () => {
-  nav.style.display = "flex";
-});
-cancelIcon.addEventListener("click", () => {
-  nav.style.display = "none";
-});
 
 //SCROLL
 
@@ -140,11 +127,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Mostrar la próxima opinión en el carrusel
-    opiniones[
-      (indiceActual + opinionesVisibles - 1) % opiniones.length
-    ].style.display = "flex"; // Usando % aseguramos que el índice calculado esté dentro del rango válido
+    opiniones[(indiceActual + opinionesVisibles - 1) % opiniones.length].style.display = "flex"; // Usando % aseguramos que el índice calculado esté dentro del rango válido
   });
 });
+
+/*//CARRUSEL VIAJES
+let responsiveWindow = window.innerWidth;
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (responsiveWindow < 1000) {
+    document.querySelector(".active").classList.remove("active");
+
+}
+  let btnNext = document.getElementById("btn_next");
+  let travels = document.querySelectorAll(".card");
+  let travelVisible = 7; // Queremos mostrar solo 4 opiniones por vez
+  let actualIndex = 0; // Variable para llevar el seguimiento del índice actual del carrusel
+
+  // Ocultar todas las opiniones excepto las primeras opinionesVisibles
+  for (let i = travelVisible; i < travels.length; i++) {
+    travels[i].style.display = "none";
+  }
+
+  btnNext.addEventListener("click", function () {
+    // Ocultar la primera opinión actual
+    travels[actualIndex].style.display = "none";
+
+    // Incrementar el índice actual
+    actualIndex++;
+
+    // Si el índice actual supera el número de opiniones, lo reinicia a 0
+    if (actualIndex >= travels.length) {
+      actualIndex = 0;
+    }
+
+    // Mostrar la próxima opinión en el carrusel
+    travels[(actualIndex + travelVisible - 1) % travels.length].style.display = "block"; // Usando % aseguramos que el índice calculado esté dentro del rango válido
+  });
+});*/
 
 //CARRUSEL VIAJES
 
@@ -155,7 +175,7 @@ let responsiveWindow = window.innerWidth;
 let carrusel;
 let carrusel767;
 
-// If window < 767 carruselMil star when the page load.
+// If window < 767 carruselMil star when the page is loaded.
 window.addEventListener("load", () => {
   carruselMil();
 });
@@ -193,9 +213,7 @@ function maxMil() {
     viajes[index].classList.add("active");
 
     offset = -index * 470; // 500px width + 20px margin
-    document.getElementById(
-      "carrusel"
-    ).style.transform = `translateX(${offset}px)`;
+    document.getElementById("carrusel").style.transform = `translateX(${offset}px)`;
   }
 }
 

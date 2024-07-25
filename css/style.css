@@ -328,9 +328,23 @@ main {
 }
 
 #tours {
+    position: relative;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+#btn_next {
+    position: absolute;
+    margin: 140px auto ;
+    right: 20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
 }
 
 .card {
@@ -340,7 +354,7 @@ main {
 }
 
 .card-description {
-    background-color: rgba(0, 0, 0, 0, 0.3);
+    /*background-color: rgba(0, 0, 0, 0, 0.3);*/
     position: absolute;
     top: 50%;
     left: 50%;
@@ -580,19 +594,6 @@ article {
     height: 800px;
     width: 1000px;
     flex-grow: 2
-}
-
-article #btn_next {
-    position: absolute;
-    margin: 140px auto ;
-    right: 20px;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    font-size: 3rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    cursor: pointer 
 }
 
 #opinion_container {
@@ -1255,11 +1256,23 @@ article #btn_next {
         margin: 200px auto;
         overflow: hidden;
     }
-
     #carrusel {
         width: 4400px;
         display: flex;
         transition: transform 0.7s ease-out
+    }
+   
+    button #btn_next {
+        position: absolute;
+        margin: 140px auto ;
+        right: 20px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        font-size: 3rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        cursor: pointer;
     }
 
     .card {

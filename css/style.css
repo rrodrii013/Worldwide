@@ -375,11 +375,15 @@ main {
 }
 
 .card:hover .country{
-    filter: brightness(50%);
+    filter: brightness(40%);
 }
 
 .card:hover .card-description {
     opacity: 1;
+}
+
+.card:hover .country-name {
+    filter: brightness(20%);
 }
 
 .country-name {

@@ -161,6 +161,10 @@ main {
   border: 0 solid;
   box-sizing: border-box;
 }
+
+#btn-home{
+    margin-top: 5rem;
+}
 .btn-home {
     left: 73%;
     top: 100px;
@@ -1006,17 +1010,19 @@ article {
     }
 
     #home {
-        height: 80vh;
+        height: 100vh;
         width: 100vw;
         margin: 70px 0 0;
-        background-attachment:scroll;
         border-radius: 0;
+        background-attachment:scroll;
     }
 
     #home #img-home #text-home{
         font-size: 2rem;
         left: 100px;
-        top: 100px
+        top: 100px;
+        margin:1rem auto;
+        color: red;
     }
 
     .btn-home {

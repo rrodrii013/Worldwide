@@ -130,7 +130,7 @@ main {
     background-position: center center;
     background-size: cover;
     position: relative;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     margin-top: 10vh;
 }
@@ -1021,14 +1021,13 @@ article {
         font-size: 2rem;
         left: 100px;
         top: 100px;
-        margin:1rem auto;
-        color: red;
+        margin:1rem auto
     }
 
     .btn-home {
         top: -100px;
         width: 250px;
-        height: 70px;
+        height: 70px
     }
 
 

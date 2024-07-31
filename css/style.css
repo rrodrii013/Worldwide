@@ -261,7 +261,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 80px 50px 60px auto;
+    margin: 80px 50px auto auto;
     width: 95vw;
     height: 100%;
     border-radius: 20px;

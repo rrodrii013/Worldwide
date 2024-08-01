@@ -34,7 +34,7 @@ const OpinionUsers = async () => {
 // Llamando la función al cargar la página
 document.addEventListener("DOMContentLoaded", OpinionUsers);
 
-//SCROLL
+//SCROLL FROM HOME TO CONTACT
 
 let btnHome = document.querySelector(".btn-home");
 
@@ -175,11 +175,6 @@ let responsiveWindow = window.innerWidth;
 let carrusel;
 let carrusel767;
 
-// If window < 767 carruselMil star when the page is loaded.
-window.addEventListener("load", () => {
-  carruselMil();
-});
-
 function carruselTop() {
   document.querySelector(".active").classList.remove("active");
 
@@ -204,39 +199,17 @@ function resetCarruselPosition() {
   document.getElementById("carrusel").style.transform = "translateX(0)";
 }
 
-function maxMil() {
-  stopCarrusel();
-  if (responsiveWindow < 1000) {
-    document.querySelector(".active").classList.remove("active");
-
-    index = (index + 1) % totalViajes; // Vuelve a 0 después de la última tarjeta
-    viajes[index].classList.add("active");
-
-    offset = -index * 470; // 500px width + 20px margin
-    document.getElementById("carrusel").style.transform = `translateX(${offset}px)`;
-  }
-}
-
-function carruselMil() {
-  carrusel767 = setInterval(maxMil, 2000);
-}
-
-function stopMil() {
-  clearInterval(carrusel767);
-}
-
 function handleResize() {
   responsiveWindow = window.innerWidth < 479;
   if (responsiveWindow) {
     startCarrusel();
   } else {
-    stopMil();
     stopCarrusel();
     resetCarruselPosition();
   }
 }
 
-function handleResize1() {
+/*function handleResize1() {
   responsiveWindow = window.innerWidth < 767;
   if (responsiveWindow) {
     carruselMil();
@@ -245,11 +218,10 @@ function handleResize1() {
     stopCarrusel();
     resetCarruselPosition();
   }
-}
+}*/
 
 window.addEventListener("resize", function () {
-  stopMil();
   stopCarrusel();
   handleResize();
-  handleResize1();
+  //handleResize1();
 });
